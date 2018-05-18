@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Endilie Yacop Sucipto Blog</title>
+        <link>https://endiliey.github.io/blog</link>
+        <description>The best place to stay up-to-date with the latest Endilie Yacop Sucipto news and events.</description>
+        <lastBuildDate>Fri, 18 May 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Endilie Yacop Sucipto Blog</title>
+            <url>https://endiliey.github.io/img/elogo.gif</url>
+            <link>https://endiliey.github.io/blog</link>
+        </image>
+        <copyright>Copyright © 2018 Endilie Yacop Sucipto</copyright>
+        <item>
+            <title><![CDATA[Hello, World !]]></title>
+            <link>https://endiliey.github.io/blog/2018/05/18/hello-world.html</link>
+            <guid>https://endiliey.github.io/blog/2018/05/18/hello-world.html</guid>
+            <pubDate>Fri, 18 May 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hi, Endilie here.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>
