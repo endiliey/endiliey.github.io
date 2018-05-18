@@ -54,6 +54,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
+  cname: 'endiliey.com',
   projectName: 'endiliey.github.io',
   organizationName: 'endiliey',
   // For top-level user or org sites, the organization is still the same.
