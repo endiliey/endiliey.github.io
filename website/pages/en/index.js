@@ -81,8 +81,8 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <a
-              className="social-link fa fa-twitter fa-2x fa-fw"
-              href="https://twitter.com/endiliey"
+              className="social-link fa fa-quora fa-2x fa-fw"
+              href="https://www.quora.com/profile/Endilie-Yacop-Sucipto/"
               target="_blank"
             />
             <a
@@ -101,13 +101,13 @@ class HomeSplash extends React.Component {
               target="_blank"
             />
             <a
-              className="social-link fa fa-facebook fa-2x fa-fw"
-              href="https://facebook.com/endijr/"
+              className="social-link fa fa-twitter fa-2x fa-fw"
+              href="https://twitter.com/endiliey"
               target="_blank"
             />
             <a
-              className="social-link fa fa-quora fa-2x fa-fw"
-              href="https://www.quora.com/profile/Endilie-Yacop-Sucipto/"
+              className="social-link fa fa-facebook fa-2x fa-fw"
+              href="https://facebook.com/endijr/"
               target="_blank"
             />
           </PromoSection>

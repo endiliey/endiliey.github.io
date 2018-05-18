@@ -63,6 +63,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {blog: true, label: 'Blog'},
+    {href: "https://forum.endiliey.com", label: "Forum" },
     {href: "https://github.com/endiliey", label: "GitHub" }
   ],
 
