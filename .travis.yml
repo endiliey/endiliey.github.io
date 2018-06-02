@@ -1,23 +1,40 @@
-# Trav
+# Travis CI for https://travis-ci.com/endiliey/endiliey.github.io/
+
 language: node_js
+node_js:
+  - '8'
+
 branches:
-  only:
-    - source
+  ignore:
+    - gh-pages
 
 cache:
   yarn: true
-  directories:
-    - ~/.npm
-    - node_modules
 
 notifications:
   email: true
 
-node_js:
-  - '8'
+env:
+  matrix:
+    - TEST_TYPE=build
+    - TEST_TYPE=build_website
 
 script:
-  - git config --global user.name "${GH_NAME}"
-  - git config --global user.email "${GH_EMAIL}"
-  - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-  - cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+- |
+  if [ "$TEST_TYPE" != build_website ]
+  then
+    yarn run $TEST_TYPE
+  else
+    set -e
+    ./node_modules/.bin/gulp
+    if [ "$TRAVIS_PULL_REQUEST" = false ] && [ "$TRAVIS_BRANCH" = ${GH_BRANCH} ]; then
+      # Automatically publish the website
+      git config --global user.name "${GH_NAME}"
+      git config --global user.email "${GH_EMAIL}"
+      echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
+      cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+    else
+      # Make sure the website builds without error
+      cd website && yarn install && yarn build
+    fi
+  fi
