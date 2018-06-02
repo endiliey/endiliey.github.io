@@ -1,10 +1,16 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Docusaurus": [
+      "docusaurus/introduction",
+      "docusaurus/about"
+    ],
+    "Project A": [
+      "projectA/readme",
+      "projectA/docs/architecture",
+      "projectA/docs/contributors"
+    ],
+    "Project B": [
+      "projectB/guides/install"
+    ]
   }
 }
