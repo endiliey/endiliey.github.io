@@ -1,4 +1,5 @@
-# endiliey.github.io
+# endiliey.github.io 
+[![Build Status](https://travis-ci.com/endiliey/endiliey.github.io.svg?branch=source)](https://travis-ci.com/endiliey/endiliey.github.io)
 This is a static personal website for Endilie Yacop Sucipto
 
 ![Preview](preview.PNG)
