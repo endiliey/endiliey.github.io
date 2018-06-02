@@ -5,15 +5,9 @@ node_js:
   - '8'
 
 branches:
-<<<<<<< HEAD
-  ignore:
-    - gh-pages
-
-=======
   only:
     - source
     
->>>>>>> 8bf8f6543907ba3d9053d0a472bbb408f537044a
 cache:
   yarn: true
 
