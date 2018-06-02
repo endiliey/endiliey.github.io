@@ -5,9 +5,15 @@ node_js:
   - '8'
 
 branches:
+<<<<<<< 6d01adba83bbf7b5453c88841428657373c3a0dc
   only:
     - source
     
+=======
+  ignore:
+    - gh-pages
+
+>>>>>>> better .travis.yml
 cache:
   yarn: true
 
@@ -16,6 +22,10 @@ notifications:
 
 env:
   matrix:
+<<<<<<< 6d01adba83bbf7b5453c88841428657373c3a0dc
+=======
+    - TEST_TYPE=build
+>>>>>>> better .travis.yml
     - TEST_TYPE=build_website
 
 script:
