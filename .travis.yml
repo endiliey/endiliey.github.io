@@ -20,20 +20,10 @@ env:
 
 script:
 - |
-  if [ "$TEST_TYPE" != build_website ]
+  if [ "$TEST_TYPE" != build_website ];
   then
     yarn run $TEST_TYPE
   else
-    set -e
-    ./node_modules/.bin/gulp
-    if [ "$TRAVIS_PULL_REQUEST" = false ] && [ "$TRAVIS_BRANCH" = ${GH_BRANCH} ]; then
-      # Automatically publish the website
-      git config --global user.name "${GH_NAME}"
-      git config --global user.email "${GH_EMAIL}"
-      echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-      cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
-    else
-      # Make sure the website builds without error
     if [ "$TRAVIS_PULL_REQUEST" = false ]; then
       # Configure git user & setup
       echo "Publishing ..."
