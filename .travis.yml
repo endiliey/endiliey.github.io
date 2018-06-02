@@ -5,9 +5,15 @@ node_js:
   - '8'
 
 branches:
+<<<<<<< HEAD
   ignore:
     - gh-pages
 
+=======
+  only:
+    - source
+    
+>>>>>>> 8bf8f6543907ba3d9053d0a472bbb408f537044a
 cache:
   yarn: true
 
@@ -16,7 +22,6 @@ notifications:
 
 env:
   matrix:
-    - TEST_TYPE=build
     - TEST_TYPE=build_website
 
 script:
@@ -35,6 +40,26 @@ script:
       cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
     else
       # Make sure the website builds without error
+    if [ "$TRAVIS_PULL_REQUEST" = false ]; then
+      # Configure git user & setup
+      echo "Publishing ..."
+      git config --global user.name "${GH_NAME}"
+      git config --global user.email "${GH_EMAIL}"
+      echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
+      cd website && yarn install && yarn run write-translations && cd ..
+      # install Crowdin
+      sudo apt-get install default-jre
+      wget https://artifacts.crowdin.com/repo/deb/crowdin.deb -O crowdin.deb
+      sudo dpkg -i crowdin.deb
+      # upload translation strings and download translations
+      cd website
+      CROWDIN_DOCUSAURUS_PROJECT_ID="${CROWDIN_ID}" CROWDIN_DOCUSAURUS_API_KEY="${CROWDIN_API}" yarn run crowdin-upload
+      CROWDIN_DOCUSAURUS_PROJECT_ID="${CROWDIN_ID}" CROWDIN_DOCUSAURUS_API_KEY="${CROWDIN_API}" yarn run crowdin-download
+      # publish
+      GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+    else
+      # Make sure the website builds without error
+      echo "Builds .."
       cd website && yarn install && yarn build
     fi
   fi
