@@ -33,7 +33,7 @@ yarn run build
 
 Publish (only endiliey can publish)
 ```
-GIT_USER=endiliey CURRENT_BRANCH=source USE_SSH=false yarn run publish-gh-pages
+GIT_USER=endiliey CURRENT_BRANCH=source USE_SSH=true yarn run publish-gh-pages
 ```
 
 *This website is built with a [Docosaurus](https://docusaurus.io/)*
