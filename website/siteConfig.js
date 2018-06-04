@@ -63,12 +63,13 @@ const siteConfig = {
   headerIcon: 'img/elogo.gif',
   footerIcon: 'img/elogo.gif',
   favicon: 'img/elogo.gif',
-  /*
   algolia: {
-    apiKey: '',
+    apiKey: '171b70d5e547d2101578da9a40c0d9f5',
     indexName: 'endiliey',
+    algoliaOptions: {
+      'facetFilters': ["language:en"]
+    }
   },
-  */
   colors: {
     primaryColor: '#28ACE2',
     secondaryColor: '#1E81AA',
