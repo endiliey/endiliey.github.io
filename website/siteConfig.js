@@ -67,7 +67,7 @@ const siteConfig = {
     apiKey: '171b70d5e547d2101578da9a40c0d9f5',
     indexName: 'endiliey',
     algoliaOptions: {
-      'facetFilters': ["language:en"]
+      'facetFilters': ["language:LANGUAGE"] // LANGUAGE will be dynamically changed in lib/core/Site.js
     }
   },
   colors: {
