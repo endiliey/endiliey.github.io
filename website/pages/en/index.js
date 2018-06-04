@@ -11,6 +11,7 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
+const translate = require('../../server/translate.js').translate;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
@@ -131,80 +132,32 @@ const Features = props => (
     {[
       {
         content: (
-          `I like to share my knowledge and experiences. Be it in [quora](https://www.quora.com/profile/Endilie-Yacop-Sucipto)
-          or my [blog](/blog)`
+          <translate>I like to share my knowledge and experiences. Be it in </translate> +
+          `[quora](https://www.quora.com/profile/Endilie-Yacop-Sucipto)` +
+          <translate>or my </translate> + `[blog](/blog)`
         ),
         image: imgUrl('Endilie_1.png'),
         imageAlign: 'top',
-        title: 'Writer',
+        title: <translate>Writer</translate>,
       },
       {
         content: (
-          `I am an undergraduate student at Nanyang Technological University (2019)`
+          <translate>I am an undergraduate student at Nanyang Technological University (2019)</translate>
         ),
         image: imgUrl('Endilie_2.png'),
         imageAlign: 'top',
-        title: 'Student',
+        title: <translate>Student</translate>,
       },
       {
         content: (
-          `My passion is in software development.
-          Some of my projects are hosted at [GitHub](https://github.com/endiliey)`
+          <translate>My passion is in software development.</translate> +
+          <translate>Some of my projects are hosted at </translate> +
+          `[GitHub](https://github.com/endiliey)`
         ),
         image: imgUrl('Endilie_3.png'),
         imageAlign: 'top',
-        title: 'Developer',
+        title: <translate>Developer</translate>,
       }
-    ]}
-  </Block>
-);
-
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: (
-          `I am an undergraduate student at Nanyang Technological University (2019). I love working on Software projects, especially the one with lot of challenges. `
-        ),
-        image: imgUrl('Endilie.png'),
-        imageAlign: 'left',
-        title: 'About Me                                ',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
     ]}
   </Block>
 );
@@ -227,7 +180,7 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection">
-      <h2>{"Internship Experiences"}</h2>
+      <h2><translate>"Internship Experiences"</translate></h2>
       <div className="logos">{showcase}</div>
     </div>
   );
