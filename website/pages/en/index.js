@@ -133,8 +133,8 @@ const Features = props => (
       {
         content: (
           <translate>I like to share my knowledge and experiences. Be it in </translate> +
-          `[quora](https://www.quora.com/profile/Endilie-Yacop-Sucipto)` +
-          <translate>or my </translate> + `[blog](/blog)`
+          ` [quora](https://www.quora.com/profile/Endilie-Yacop-Sucipto) ` +
+          <translate>or my </translate> + ` [blog](/blog)`
         ),
         image: imgUrl('Endilie_1.png'),
         imageAlign: 'top',
@@ -150,9 +150,9 @@ const Features = props => (
       },
       {
         content: (
-          <translate>My passion is in software development.</translate> +
-          <translate>Some of my projects are hosted at </translate> +
-          `[GitHub](https://github.com/endiliey)`
+          <translate>My passion is in software development.</translate> + ' ' +
+          <translate> Some of my projects are hosted at </translate> +
+          ` [GitHub](https://github.com/endiliey)`
         ),
         image: imgUrl('Endilie_3.png'),
         imageAlign: 'top',
@@ -180,7 +180,7 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection">
-      <h2><translate>"Internship Experiences"</translate></h2>
+      <h2><translate>Internship Experiences</translate></h2>
       <div className="logos">{showcase}</div>
     </div>
   );
