@@ -49,6 +49,7 @@ const siteConfig = {
   tagline: 'I love building things' ,
   url: 'https://endiliey.github.io',
   baseUrl: '/',
+  cleanUrl: true,
   cname: 'endiliey.com',
   noIndex: false,
   projectName: 'endiliey.github.io',
