@@ -14,7 +14,7 @@ git clone https://github.com/endiliey/endiliey.github.io.git
 
 Install dependencies
 ```
-cd endiliey.github.io
+cd website
 yarn install
 ```
 
