@@ -24,18 +24,3 @@ It will be available on localhost:3000
 cd website
 yarn start
 ```
-
-## Publishing to GitHub pages
-
-Build the files
-```
-cd website
-yarn run build
-```
-
-Publish (only endiliey can publish)
-```
-GIT_USER=endiliey CURRENT_BRANCH=source USE_SSH=true yarn run publish-gh-pages
-```
-
-*This website is built with a [Docosaurus](https://docusaurus.io/)*
