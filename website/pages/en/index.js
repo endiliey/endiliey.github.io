@@ -202,4 +202,6 @@ class Index extends React.Component {
   }
 }
 
+Index.description = 'Endilie is an undergraduate student at Nanyang Technological University (2019). He likes to write & code in his free time';
+
 module.exports = Index;
