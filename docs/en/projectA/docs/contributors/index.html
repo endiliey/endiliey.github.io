@@ -8,12 +8,29 @@
             languagesDropDown.className = "hide";
           }
         });
-      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Project A</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Docusaurus</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/docusaurus/introduction">Introducing Docusaurus</a></li><li class="navListItem"><a class="navItem" href="/docs/en/docusaurus/about">Docusaurus</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/en/projectA/docs/architecture">Architecture</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/en/projectA/docs/contributors">Contributors</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/projectB/guides/install">Install</a></li></ul></div></div></section></div><script>
-          var toggler = document.getElementById('navToggler');
-          var nav = document.getElementById('docsNav');
-          toggler.onclick = function() {
-            nav.classList.toggle('docsSliderActive');
-          };
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Project A</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Docusaurus</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/docusaurus/introduction">Introducing Docusaurus</a></li><li class="navListItem"><a class="navItem" href="/docs/en/docusaurus/about">Docusaurus</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/en/projectA/docs/architecture">Architecture</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/en/projectA/docs/contributors">Contributors</a></li></ul></div><div class="navGroup navGroupActive"><h3>Project B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/projectB/guides/install">Install</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Contributors</h1></header><article><div><span><p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="architecture">← Architecture</a><a class="docs-next button" href="../../projectB/guides/install">Install →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Endilie Yacop Sucipto</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({

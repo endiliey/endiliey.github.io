@@ -8,12 +8,29 @@
             languagesDropDown.className = "hide";
           }
         });
-      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>도코 사우루스</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>도코 사우루스</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/ko/docusaurus/introduction">Docusaurus 소개</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/about">도코 사우루스</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/architecture">건축물</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/contributors">기여자</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectB/guides/install">설치</a></li></ul></div></div></section></div><script>
-          var toggler = document.getElementById('navToggler');
-          var nav = document.getElementById('docsNav');
-          toggler.onclick = function() {
-            nav.classList.toggle('docsSliderActive');
-          };
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>도코 사우루스</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>도코 사우루스</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/ko/docusaurus/introduction">Docusaurus 소개</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/about">도코 사우루스</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/architecture">건축물</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/contributors">기여자</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectB/guides/install">설치</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/endiliey/ko" target="_blank" rel="noreferrer noopener">Translate</a><h1>Docusaurus 소개</h1></header><article><div><span><p><img src="/img/slash-introducing.png" alt="슬래시 소개"></p>
 <p>우리는 매우 행복 <a href="https://github.com/facebook/Docusaurus">하나를 관리 하는 데 도움이 Docusaurus</a> 를 소개 또는 많은 오픈 소스 웹사이트.</p>
 <p>우리는 다음과 같은 이유로 <a href="https://docusaurus.io">Docusaurus</a> 를 만든:</p>

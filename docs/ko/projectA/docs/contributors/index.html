@@ -8,12 +8,29 @@
             languagesDropDown.className = "hide";
           }
         });
-      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>프로젝트 A</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>도코 사우루스</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/introduction">Docusaurus 소개</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/about">도코 사우루스</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/architecture">건축물</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/ko/projectA/docs/contributors">기여자</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectB/guides/install">설치</a></li></ul></div></div></section></div><script>
-          var toggler = document.getElementById('navToggler');
-          var nav = document.getElementById('docsNav');
-          toggler.onclick = function() {
-            nav.classList.toggle('docsSliderActive');
-          };
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>프로젝트 A</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>도코 사우루스</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/introduction">Docusaurus 소개</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/docusaurus/about">도코 사우루스</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 A</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/readme">README</a></li><li class="navListItem"><a class="navItem" href="/docs/ko/projectA/docs/architecture">건축물</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/ko/projectA/docs/contributors">기여자</a></li></ul></div><div class="navGroup navGroupActive"><h3>프로젝트 B</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ko/projectB/guides/install">설치</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/endiliey/ko" target="_blank" rel="noreferrer noopener">Translate</a><h1>기여자</h1></header><article><div><span><p>그러나 나는 즐거움을 비난하고 고통을 찬양하는 잘못된 생각이 어떻게 태어 났는지 설명해야만합니다. 나는 당신에게 그 체계에 대한 완전한 설명을하고, 진리의 위대한 탐험가 인 인간의 주인공의 실제 가르침을 설명 할 것입니다. 행복. 어느 누구도 기쁨이기 때문에 기쁨을 거부하거나 싫어하거나 회피하지 않습니다. 그러나 즐거움을 추구하는 방법을 모르는 사람들은 합리적으로 극도로 고통스러운 결과를 겪습니다. 고통이기 때문에 사랑하거나 추구하거나 고통을 얻기 원하는 사람이 있습니다. 그러나 때로는 수고와 고통으로 인해 큰 기쁨을 얻을 수있는 상황이 생기기도합니다. 사소한 예를 들자면, 우리 중 어느 누구도 힘든 운동을하지 않고, 어떤 이점을 얻는 것을 제외하고는? 그러나 성가신 결과가없는 즐거움을 즐기기로 결심 한 사람이나 결과적 즐거움을 가져다주지 않는 고통을 피하는 사람에게 잘못을 찾는 권리는 누구에게나 있습니다</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="architecture">← 건축물</a><a class="docs-next button" href="../../projectB/guides/install">설치 →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Endilie Yacop Sucipto</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
