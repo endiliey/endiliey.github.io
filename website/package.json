@@ -11,6 +11,6 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
   },
   "devDependencies": {
-    "docusaurus": "endiliey/Docusaurus#eslint"
+    "docusaurus": "endiliey/Docusaurus#publish"
   }
 }
