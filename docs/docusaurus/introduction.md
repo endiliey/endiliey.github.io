@@ -3,7 +3,7 @@ id: introduction
 title: Introducing Docusaurus
 ---
 
-![Introducing Slash](/img/slash-introducing.png)
+![Introducing Slash](assets/docusaurus/slash-introducing.png)
 
 We are very happy to introduce [Docusaurus](https://github.com/facebook/Docusaurus) to help you manage one or many open source websites.
 
