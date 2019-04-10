@@ -1,16 +1,23 @@
 {
+  "name": "docusaurus-2-website",
+  "version": "2.0.0-alpha.0",
+  "private": true,
   "scripts": {
-    "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
-    "build": "docusaurus-build",
-    "publish-gh-pages": "docusaurus-publish",
-    "write-translations": "docusaurus-write-translations",
-    "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version",
-    "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
-    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "eject": "docusaurus eject",
+    "deploy": "docusaurus deploy"
   },
-  "devDependencies": {
-    "docusaurus": "facebook/Docusaurus#master"
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.1",
+    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.0",
+    "@docusaurus/plugin-content-blog": "^2.0.0-alpha.0",
+    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.0",
+    "@docusaurus/plugin-sitemap": "^2.0.0-alpha.0",
+    "classnames": "^2.2.6",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-youtube": "^7.9.0"
   }
 }

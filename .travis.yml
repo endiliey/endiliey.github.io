@@ -40,7 +40,7 @@ script:
       CROWDIN_DOCUSAURUS_PROJECT_ID="${CROWDIN_ID}" CROWDIN_DOCUSAURUS_API_KEY="${CROWDIN_API}" yarn run crowdin-upload
       CROWDIN_DOCUSAURUS_PROJECT_ID="${CROWDIN_ID}" CROWDIN_DOCUSAURUS_API_KEY="${CROWDIN_API}" yarn run crowdin-download
       # publish
-      GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+      GIT_USER="${GH_NAME}" yarn run deploy
     else
       # Make sure the website builds without error
       echo "Builds .."
