@@ -10,11 +10,11 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.1",
-    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.0",
-    "@docusaurus/plugin-content-blog": "^2.0.0-alpha.0",
-    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.0",
-    "@docusaurus/plugin-sitemap": "^2.0.0-alpha.0",
+    "@docusaurus/core": "^2.0.0-alpha.6",
+    "@docusaurus/plugin-content-docs": "^2.0.0-alpha.6",
+    "@docusaurus/plugin-content-blog": "^2.0.0-alpha.6",
+    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.6",
+    "@docusaurus/plugin-sitemap": "^2.0.0-alpha.6",
     "classnames": "^2.2.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
