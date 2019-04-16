@@ -6,7 +6,7 @@ const siteConfig = {
   projectName: 'endiliey.github.io',
   organizationName: 'endiliey',
   headerLinks: [
-    {doc: 'docusaurus/introduction', label: 'Docs'},
+    {doc: 'hello', label: 'Docs'},
     {blog: true, label: 'Blog'},
     {href: "https://forum.endiliey.com", label: "Forum" },
     {href: "https://github.com/endiliey", label: "GitHub" }
