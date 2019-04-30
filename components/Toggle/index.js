@@ -9,6 +9,13 @@ export default function(props) {
     typeof document !== 'undefined'
       ? document.querySelector('html').getAttribute('data-theme')
       : '';
+
+  useEffect(() => {
+    try {
+      const localStorageTheme = localStorage.getItem('theme');
+      setTheme(localStorageTheme);
+    } catch (err) {}
+  }, []);
   const [theme, setTheme] = useState(currentTheme);
   return (
     <React.Fragment>
@@ -38,7 +45,11 @@ export default function(props) {
         }}
         checked={theme === 'dark'} // TODO
         onChange={e => {
-          setTheme(e.target.checked ? 'dark' : '');
+          const nextTheme = e.target.checked ? 'dark' : '';
+          setTheme(nextTheme);
+          try {
+            localStorage.setItem('theme', nextTheme);
+          } catch (err) {}
         }}
       />
     </React.Fragment>

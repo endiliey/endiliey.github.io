@@ -23,7 +23,7 @@ const siteConfig = {
       name: '@docusaurus/plugin-content-blog',
       options: {
         path: './blog',
-        routeBasePath: '',
+        routeBasePath: '/',
         blogPageComponent: `${__dirname}/components/BlogPage`,
         blogPostComponent: `${__dirname}/components/BlogPost`,
       },

@@ -7,7 +7,10 @@ function Footer() {
         <div className="row">
           <div className="col col--6 col--offset-3">
             <div style={{float: 'right'}}>
-              <a href="https://docusaurus-2.netlify.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://docusaurus-2.netlify.com/"
+                target="_blank"
+                rel="noopener noreferrer">
                 docusaurus 2
               </a>
             </div>
