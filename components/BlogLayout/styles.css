@@ -81,14 +81,11 @@ body {
 }
 
 .hash-link {
+  opacity: 0;
   position: absolute;
   margin-left: -1.25rem;
   padding-right: 1.25rem;
 }
-
-.hash-link {
-    opacity: 0;
-  }
 
 *:hover > .hash-link {
   opacity: 1;
