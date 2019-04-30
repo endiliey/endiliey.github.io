@@ -1,5 +1,5 @@
 const siteConfig = {
-  title: 'Endilie Yacop Sucipto',
+  title: 'Endilie Y',
   tagline: 'I love building things',
   url: 'https://endiliey.github.io',
   baseUrl: '/',
