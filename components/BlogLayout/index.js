@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from '@theme/Search';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -9,7 +10,7 @@ import './styles.css';
 function BlogLayout(props) {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
-  const {baseUrl, favicon, tagline} = siteConfig;
+  const {baseUrl, favicon, tagline, algolia} = siteConfig;
   const {children, metadata} = props;
   const {isBlogPage, title} = metadata;
 
@@ -58,6 +59,20 @@ function BlogLayout(props) {
     }
   };
 
+  const SearchBar = () => {
+    // TODO: for now don't include search bar because its weird
+    return null;
+
+    if (!algolia) {
+      return null;
+    }
+    return (
+      <div className="search" key="search-box">
+        <Search />
+      </div>
+    );
+  };
+
   return (
     <React.Fragment>
       <Head defaultTitle={siteConfig.title}>
@@ -70,9 +85,12 @@ function BlogLayout(props) {
             {renderHeader()}
             <Toggle />
           </div>
-          <div className="col col--6 col--offset-3">
-            {isBlogPage && renderBio()}
-          </div>
+          {isBlogPage && (
+            <div className="blogHeader">
+              {renderBio()}
+              <SearchBar />
+            </div>
+          )}
         </div>
       </div>
       {children}
