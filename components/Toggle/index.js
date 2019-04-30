@@ -5,12 +5,11 @@ import Toggle from 'react-toggle';
 import Head from '@docusaurus/Head';
 
 export default function(props) {
-  const [theme, setTheme] = useState('');
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      setTheme(document.querySelector('html').getAttribute('data-theme'));
-    }
-  }, []);
+  const currentTheme =
+    typeof document !== 'undefined'
+      ? document.querySelector('html').getAttribute('data-theme')
+      : '';
+  const [theme, setTheme] = useState(currentTheme);
   return (
     <React.Fragment>
       <Head>
