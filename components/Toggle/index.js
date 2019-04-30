@@ -1,10 +1,14 @@
-import './styles.css';
-
 import React, {useState, useEffect} from 'react';
 import Toggle from 'react-toggle';
 import Head from '@docusaurus/Head';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+import './styles.css';
 
 export default function(props) {
+  const context = useDocusaurusContext();
+  const {siteConfig = {}} = context;
+  const {baseUrl} = siteConfig;
   const currentTheme =
     typeof document !== 'undefined'
       ? document.querySelector('html').getAttribute('data-theme')
@@ -26,7 +30,7 @@ export default function(props) {
         icons={{
           checked: (
             <img
-              src={'/img/moon.png'}
+              src={`${baseUrl}img/moon.png`}
               width="16"
               height="16"
               role="presentation"
@@ -35,7 +39,7 @@ export default function(props) {
           ),
           unchecked: (
             <img
-              src={'/img/sun.png'}
+              src={`${baseUrl}img/sun.png`}
               width="16"
               height="16"
               role="presentation"
