@@ -2,22 +2,9 @@
 
 language: node_js
 node_js:
-  - '8'
-
-branches:
-  only:
-    - source
-    
-cache:
-  yarn: true
-
-notifications:
-  email: true
+  - lts/*
 
 script:
-  - yarn install
-
-before_deploy:
   - yarn run build
 
 deploy:
@@ -25,5 +12,6 @@ deploy:
   github_token: $GH_TOKEN
   skip_cleanup: true
   local-dir: build
+  keep-history: true
   on:
     branch: source
