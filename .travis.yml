@@ -30,10 +30,10 @@ script:
       git config --global user.name "${GH_NAME}"
       git config --global user.email "${GH_EMAIL}"
       echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-      cd website && yarn install && GIT_USER="${GH_NAME}" yarn run deploy
+      yarn install && GIT_USER="${GH_NAME}" yarn run deploy
     else
       # Make sure the website builds without error
       echo "Builds .."
-      cd website && yarn install && yarn build
+      yarn install && yarn build
     fi
   fi

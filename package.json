@@ -1,0 +1,28 @@
+{
+  "name": "endiliey-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "deploy": "docusaurus deploy",
+    "prettier": "prettier --config .prettierrc --write \"**/*.js\""
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.12",
+    "@docusaurus/mdx-loader": "^2.0.0-alpha.12",
+    "@docusaurus/plugin-content-blog": "^2.0.0-alpha.12",
+    "@docusaurus/plugin-content-pages": "^2.0.0-alpha.12",
+    "@docusaurus/plugin-sitemap": "^2.0.0-alpha.12",
+    "classnames": "^2.2.6",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-toggle": "^4.0.2",
+    "react-trend": "^1.2.4",
+    "react-youtube": "^7.9.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  }
+}
