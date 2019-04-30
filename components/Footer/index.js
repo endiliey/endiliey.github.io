@@ -7,9 +7,8 @@ function Footer() {
         <div className="row">
           <div className="col col--6 col--offset-3">
             <div style={{float: 'right'}}>
-              {/* TODO: Generate actual RSS */}
-              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">
-                sitemap
+              <a href="https://docusaurus-2.netlify.com/" target="_blank" rel="noopener noreferrer">
+                docusaurus 2
               </a>
             </div>
             <a
