@@ -155,8 +155,6 @@ body {
   width: 12.5rem;
 }
 
-/* Temporary hack until docusaurus 2.0.0-alpha.13 is release */
-
 @media (max-width: 996px) {
   .blogHeader {
     --ifm-col-width: 100%;
