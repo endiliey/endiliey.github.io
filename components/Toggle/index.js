@@ -47,7 +47,7 @@ export default function(props) {
             />
           ),
         }}
-        checked={theme === 'dark'} // TODO
+        checked={theme === 'dark'}
         onChange={e => {
           const nextTheme = e.target.checked ? 'dark' : '';
           setTheme(nextTheme);
