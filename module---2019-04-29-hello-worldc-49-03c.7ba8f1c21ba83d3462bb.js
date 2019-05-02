@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{44:function(o){o.exports={permalink:"/2019/04/29/hello-world",source:"/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md",title:"Hello world",date:"2019-04-29T06:00:00.000Z"}}}]);
