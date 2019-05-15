@@ -9,15 +9,13 @@ import './styles.css';
 function BlogLayout(props) {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
-  const {baseUrl, favicon, tagline, algolia} = siteConfig;
-  const {children, title, isBlogListPage} = props;
+  const {baseUrl, favicon, tagline, title: defaultTitle} = siteConfig;
+  const {children, title, isBlogListPage, description} = props;
 
   const renderBio = () => {
-    // TODO still hardcoded here
     const authorImageURL = `https://avatars1.githubusercontent.com/u/17883920?s=400&u=0c9bcb0ad70e3ceb7eb10a8116f0a976c46624fa&v=4`;
     const author = 'Endi';
     const authorURL = 'https://github.com/endiliey';
-    const authorTitle = 'Maintainer of Docusaurus';
     return (
       <div className="avatar">
         {authorImageURL && (
@@ -59,9 +57,13 @@ function BlogLayout(props) {
 
   return (
     <React.Fragment>
-      <Head defaultTitle={siteConfig.title}>
-        {title && <title>{title}</title>}
+      <Head defaultTitle={`${defaultTitle} · ${tagline}`}>
+        {title && <title>{`${title} · ${tagline}`}</title>}
         {favicon && <link rel="shortcut icon" href={baseUrl + favicon} />}
+        {description && <meta name="description" content={description} />}
+        {description && (
+          <meta property="og:description" content={description} />
+        )}
       </Head>
       <div className="container">
         <div className="row">
@@ -69,11 +71,7 @@ function BlogLayout(props) {
             {renderHeader()}
             <Toggle />
           </div>
-          {isBlogListPage && (
-            <div className="blogHeader">
-              {renderBio()}
-            </div>
-          )}
+          {isBlogListPage && <div className="blogHeader">{renderBio()}</div>}
         </div>
       </div>
       {children}

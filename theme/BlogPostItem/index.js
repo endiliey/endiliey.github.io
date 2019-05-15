@@ -47,34 +47,37 @@ function BlogPostItem(props) {
           </small>
         </div>
         {!truncated && (
-        <div className="avatar margin-bottom--md">
-          {authorImageURL && (
-            <a
-              className="avatar__photo-link"
-              href={authorURL}
-              target="_blank"
-              rel="noreferrer noopener">
-              <img
-                className="avatar__photo"
-                src={authorImageURL}
-                alt={author}
-              />
-            </a>
-          )}
-          <div className="avatar__intro">
-            {author && (
-              <>
-                <h4 className="avatar__name">
-                  <a href={authorURL} target="_blank" rel="noreferrer noopener">
-                    {author}
-                  </a>
-                </h4>
-                <small className="avatar__subtitle">{authorTitle}</small>
-              </>
+          <div className="avatar margin-bottom--md">
+            {authorImageURL && (
+              <a
+                className="avatar__photo-link"
+                href={authorURL}
+                target="_blank"
+                rel="noreferrer noopener">
+                <img
+                  className="avatar__photo"
+                  src={authorImageURL}
+                  alt={author}
+                />
+              </a>
             )}
+            <div className="avatar__intro">
+              {author && (
+                <>
+                  <h4 className="avatar__name">
+                    <a
+                      href={authorURL}
+                      target="_blank"
+                      rel="noreferrer noopener">
+                      {author}
+                    </a>
+                  </h4>
+                  <small className="avatar__subtitle">{authorTitle}</small>
+                </>
+              )}
+            </div>
           </div>
-        </div>)
-        }
+        )}
       </header>
     );
   };

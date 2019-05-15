@@ -15,7 +15,10 @@ function BlogListPage(props) {
   const {metadata, items} = props;
 
   return (
-    <Layout isBlogListPage={true} title="Blog" description="Blog">
+    <Layout
+      isBlogListPage={true}
+      title="Endiliey"
+      description="Endilie's personal blog">
       <div className="container margin-vert--xl">
         <div className="row">
           <div className="col col--6 col--offset-3">

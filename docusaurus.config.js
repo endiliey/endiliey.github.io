@@ -20,7 +20,7 @@ const siteConfig = {
   },
   headerIcon: 'img/endilie.gif',
   favicon: 'img/endilie.gif',
-    presets: [
+  presets: [
     [
       '@docusaurus/preset-classic',
       {
