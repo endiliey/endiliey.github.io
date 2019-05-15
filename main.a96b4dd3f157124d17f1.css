@@ -5,37 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-.loader_1ZfYXz3A {
-  padding: 20px;
-  text-align: center;
-}
-
-.loaderSpinning_1pzRXp8X {
-  width: 49px;
-  height: 49px;
-  margin: 0 auto;
-  border: 5px solid #ccc;
-  border-radius: 50%;
-  border-top: 5px solid #1d4d8b;
-  animation: loader-spin_1IVyKBGL infinite 1s linear;
-}
-
-@keyframes loader-spin_1IVyKBGL {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 /* Make clicks pass-through */
 #nprogress {
   pointer-events: none;

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{44:function(i){i.exports={permalink:"/2018/08/11/introducing-idne",source:"/home/travis/build/endiliey/endiliey.github.io/blog/2018-08-11-introducing-idne.md",description:"A way to submit your solution file to Codeforces through terminal.\r",date:"2018-08-11T06:00:00.000Z",tags:[],title:"Introducing Idne"}}}]);
