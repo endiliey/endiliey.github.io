@@ -29,19 +29,19 @@
       1,
       3
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/blog/2018-08-11-introducing-idne.md": [
+    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md": [
       0,
       4
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md": [
+    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-05-16-docusaurus-2-technical-preview.md": [
       0,
       5
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/blog/2018-08-11-introducing-idne.md?truncated=true": [
+    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md?truncated=true": [
       0,
       6
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md?truncated=true": [
+    "/home/travis/build/endiliey/endiliey.github.io/blog/2019-05-16-docusaurus-2-technical-preview.md?truncated=true": [
       0,
       7
     ],
@@ -49,13 +49,13 @@
       12,
       8
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-04-29-hello-world-1ab.json": [
+    "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-05-16-docusaurus-2-technical-preview-e27.json": [
       9
     ],
     "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/index.json": [
       10
     ],
-    "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2018-08-11-introducing-idne-295.json": [
+    "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-04-29-hello-world-1ab.json": [
       11
     ],
     "runtime~main": [
@@ -117,61 +117,61 @@
     "4": {
       "js": [
         {
-          "file": "content---2018-08-11-introducing-idne-86-c-6e1.f9aebc1b6b2db2d1434d.js",
-          "hash": "f9aebc1b6b2db2d1434d",
-          "publicPath": "/content---2018-08-11-introducing-idne-86-c-6e1.f9aebc1b6b2db2d1434d.js"
+          "file": "content---2019-04-29-hello-worldf-35-eb1.3483e573a4ac65ff020e.js",
+          "hash": "3483e573a4ac65ff020e",
+          "publicPath": "/content---2019-04-29-hello-worldf-35-eb1.3483e573a4ac65ff020e.js"
         }
       ]
     },
     "5": {
       "js": [
         {
-          "file": "content---2019-04-29-hello-worldf-35-eb1.dd46e7242758f231adba.js",
-          "hash": "dd46e7242758f231adba",
-          "publicPath": "/content---2019-04-29-hello-worldf-35-eb1.dd46e7242758f231adba.js"
+          "file": "content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.ef7aec83696a178e7bc6.js",
+          "hash": "ef7aec83696a178e7bc6",
+          "publicPath": "/content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.ef7aec83696a178e7bc6.js"
         }
       ]
     },
     "6": {
       "js": [
         {
-          "file": "content---4-a-8-2d4.3169eecec7ed0d2d179f.js",
-          "hash": "3169eecec7ed0d2d179f",
-          "publicPath": "/content---4-a-8-2d4.3169eecec7ed0d2d179f.js"
+          "file": "content---7-db-f87.405c30465c1ab9e5527e.js",
+          "hash": "405c30465c1ab9e5527e",
+          "publicPath": "/content---7-db-f87.405c30465c1ab9e5527e.js"
         }
       ]
     },
     "7": {
       "js": [
         {
-          "file": "content---7-db-f87.59dda2d81eb86ae90e7c.js",
-          "hash": "59dda2d81eb86ae90e7c",
-          "publicPath": "/content---7-db-f87.59dda2d81eb86ae90e7c.js"
+          "file": "content---f-2-e-9d2.d9880bad6004a5138aa2.js",
+          "hash": "d9880bad6004a5138aa2",
+          "publicPath": "/content---f-2-e-9d2.d9880bad6004a5138aa2.js"
         }
       ]
     },
     "8": {
       "css": [
         {
-          "file": "main.a96b4dd3f157124d17f1.css",
-          "hash": "a96b4dd3f157124d17f1",
-          "publicPath": "/main.a96b4dd3f157124d17f1.css"
+          "file": "main.e5ffb8b9798e97b36d8e.css",
+          "hash": "e5ffb8b9798e97b36d8e",
+          "publicPath": "/main.e5ffb8b9798e97b36d8e.css"
         }
       ],
       "js": [
         {
-          "file": "main.a96b4dd3f157124d17f1.js",
-          "hash": "a96b4dd3f157124d17f1",
-          "publicPath": "/main.a96b4dd3f157124d17f1.js"
+          "file": "main.e5ffb8b9798e97b36d8e.js",
+          "hash": "e5ffb8b9798e97b36d8e",
+          "publicPath": "/main.e5ffb8b9798e97b36d8e.js"
         }
       ]
     },
     "9": {
       "js": [
         {
-          "file": "metadata---2019-04-29-hello-worldc-49-03c.8b5d40b5df8fd39009fc.js",
-          "hash": "8b5d40b5df8fd39009fc",
-          "publicPath": "/metadata---2019-04-29-hello-worldc-49-03c.8b5d40b5df8fd39009fc.js"
+          "file": "metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.e4f0faba933c3bf0dea2.js",
+          "hash": "e4f0faba933c3bf0dea2",
+          "publicPath": "/metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.e4f0faba933c3bf0dea2.js"
         }
       ]
     },
@@ -187,18 +187,18 @@
     "11": {
       "js": [
         {
-          "file": "nextItem---2019-04-29-hello-world-500-c59.9f7b1141813e7295ca26.js",
-          "hash": "9f7b1141813e7295ca26",
-          "publicPath": "/nextItem---2019-04-29-hello-world-500-c59.9f7b1141813e7295ca26.js"
+          "file": "nextItem---2019-05-16-docusaurus-2-technical-previewc-49-585.6a29bc73244102854536.js",
+          "hash": "6a29bc73244102854536",
+          "publicPath": "/nextItem---2019-05-16-docusaurus-2-technical-previewc-49-585.6a29bc73244102854536.js"
         }
       ]
     },
     "12": {
       "js": [
         {
-          "file": "runtime~main.2893380c9d8994f7d76d.js",
-          "hash": "2893380c9d8994f7d76d",
-          "publicPath": "/runtime~main.2893380c9d8994f7d76d.js"
+          "file": "runtime~main.aa343669ed0ceebc1543.js",
+          "hash": "aa343669ed0ceebc1543",
+          "publicPath": "/runtime~main.aa343669ed0ceebc1543.js"
         }
       ]
     }
