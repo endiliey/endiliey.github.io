@@ -58,6 +58,7 @@ function BlogLayout(props) {
   return (
     <React.Fragment>
       <Head defaultTitle={`${defaultTitle} · ${tagline}`}>
+        <html lang="en" />
         {title && <title>{`${title} · ${tagline}`}</title>}
         {favicon && <link rel="shortcut icon" href={baseUrl + favicon} />}
         {description && <meta name="description" content={description} />}

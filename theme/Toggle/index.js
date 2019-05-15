@@ -28,6 +28,7 @@ export default function(props) {
         <html data-theme={theme} />
       </Head>
       <Toggle
+        aria-label={'theme toggle'}
         icons={{
           checked: (
             <img
