@@ -1,18 +1,16 @@
 import React from 'react';
-import Search from '@theme/Search';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Toggle from '../Toggle';
-import Footer from '../Footer';
+import Toggle from '@theme/Toggle';
+import Footer from '@theme/Footer';
 import './styles.css';
 
 function BlogLayout(props) {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   const {baseUrl, favicon, tagline, algolia} = siteConfig;
-  const {children, metadata} = props;
-  const {isBlogPage, title} = metadata;
+  const {children, title, isBlogListPage} = props;
 
   const renderBio = () => {
     // TODO still hardcoded here
@@ -48,7 +46,7 @@ function BlogLayout(props) {
   };
 
   const renderHeader = () => {
-    if (isBlogPage) {
+    if (isBlogListPage) {
       return <h1>{siteConfig.title}</h1>;
     } else {
       return (
@@ -59,24 +57,10 @@ function BlogLayout(props) {
     }
   };
 
-  const SearchBar = () => {
-    // TODO: for now don't include search bar because its weird
-    return null;
-
-    if (!algolia) {
-      return null;
-    }
-    return (
-      <div className="search" key="search-box">
-        <Search />
-      </div>
-    );
-  };
-
   return (
     <React.Fragment>
       <Head defaultTitle={siteConfig.title}>
-        {metadata.title && <title>{metadata.title}</title>}
+        {title && <title>{title}</title>}
         {favicon && <link rel="shortcut icon" href={baseUrl + favicon} />}
       </Head>
       <div className="container">
@@ -85,10 +69,9 @@ function BlogLayout(props) {
             {renderHeader()}
             <Toggle />
           </div>
-          {isBlogPage && (
+          {isBlogListPage && (
             <div className="blogHeader">
               {renderBio()}
-              <SearchBar />
             </div>
           )}
         </div>

@@ -2,17 +2,38 @@
 
 language: node_js
 node_js:
-  - 8
+  - '8'
+
+branches:
+  only:
+    - source
+    
+cache:
+  yarn: true
+
+notifications:
+  email: true
+
+env:
+  matrix:
+    - TEST_TYPE=build_website
 
 script:
-  - yarn run build
-
-deploy:
-  provider: pages
-  github_token: $GH_TOKEN
-  skip_cleanup: true
-  local-dir: build
-  keep-history: true
-  target_branch: master
-  on:
-    branch: source
+- |
+  if [ "$TEST_TYPE" != build_website ];
+  then
+    yarn run $TEST_TYPE
+  else
+    if [ "$TRAVIS_PULL_REQUEST" = false ]; then
+      # Configure git user & setup
+      echo "Publishing ..."
+      git config --global user.name "${GH_NAME}"
+      git config --global user.email "${GH_EMAIL}"
+      echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
+      yarn install && GIT_USER="${GH_NAME}" yarn run deploy
+    else
+      # Make sure the website builds without error
+      echo "Builds .."
+      yarn install && yarn build
+    fi
+  fi

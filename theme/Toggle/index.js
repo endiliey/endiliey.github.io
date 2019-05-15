@@ -13,6 +13,7 @@ export default function(props) {
     typeof document !== 'undefined'
       ? document.querySelector('html').getAttribute('data-theme')
       : '';
+  const [theme, setTheme] = useState(currentTheme);
 
   useEffect(() => {
     try {
@@ -20,7 +21,7 @@ export default function(props) {
       setTheme(localStorageTheme);
     } catch (err) {}
   }, []);
-  const [theme, setTheme] = useState(currentTheme);
+
   return (
     <React.Fragment>
       <Head>
