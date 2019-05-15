@@ -231,7 +231,7 @@ import Trend from 'react-trend';
 <Trend data={[0, 10, 5, 22, 3.6, 11]} />
 ```
 
-If you navigate to http://localhost:5000/blog/2018/05/16/hello, you can see that we just created a new blog post and we can embed React component inside.
+If you navigate to http://localhost:3000/blog/2018/05/16/hello, you can see that we just created a new blog post and we can embed React component inside.
 
 ![blog](/img/blog.PNG)
 
