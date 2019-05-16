@@ -41,10 +41,9 @@ This website for example, is build with Docusaurus 2 alpha.
 
 ## 💡 Getting Started
 
-Ok, you're ready for action. At this moment of writing, `docusaurus init` command hasn't been implemented for Docusaurus v2 yet, so we'll have to create files manually for now.
+Ok, you're ready for action. At this moment of writing, **`docusaurus init`** command hasn't been implemented for Docusaurus v2 yet, so we'll have to create files manually for now.
 
 ```bash
-# create a docs directory
 mkdir website
 cd website
 yarn init
@@ -52,7 +51,7 @@ yarn init
 
 Install dependencies
 ```bash
-yarn add react react-dom @docusaurus/core@2.0.0-alpha.15 @docusaurus/preset-classic@2.0.0-alpha.15
+yarn add react react-dom @docusaurus/core@next @docusaurus/preset-classic@next
 ```
 
 Then, add some scripts to `package.json`
@@ -65,29 +64,66 @@ Then, add some scripts to `package.json`
 },
 ```
 
-Create a `docusaurus.config.js`. Example:
+Create `docusaurus.config.js` with the content below:
 
 ```js
 const siteConfig = {
-  title: 'Docusaurus',
-  tagline: 'Super awesome site',
-  url: 'https://docusaurus.io',
-  baseUrl: '/',
-  projectName: 'docusaurus',
-  organizationName: 'facebook',
+  title: "Docusaurus",
+  tagline: "Super awesome site",
+  url: "https://docusaurus.io",
+  baseUrl: "/",
+  projectName: "docusaurus",
+  organizationName: "facebook",
   themeConfig: {
     headerLinks: [
-      {url: 'docs/hello', label: 'Docs'},
-      {url: 'blog', label: 'Blog'},
+      { url: "docs/hello", label: "Docs" },
+      { url: "blog", label: "Blog" }
     ],
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Hello',
+              to: 'docs/hello',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            }
+          ],
+        },
+      ],
+      logo: {
+        alt: 'Facebook Open Source Logo',
+        src: 'https://docusaurus.io/img/oss_logo.png',
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+    },
   },
-  headerIcon: '',
-  favicon: '',
+  headerIcon: "",
+  favicon: "",
   presets: [
     [
-      '@docusaurus/preset-classic',
-    ],
-  ],
+      "@docusaurus/preset-classic"
+    ]
+  ]
 };
 
 module.exports = siteConfig;
@@ -105,25 +141,64 @@ Let's create three directories. `pages`, `docs` and `blog`.
 
 ## Pages
 
-Then, let's create our homepage in `pages/index.js`
+Let's begin by creating our homepage. 
 
-Example:
+We'll create **`pages/index.css`**
+
+```css
+/* pages/index.css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+```
+
+And the javascript file itself **`pages/index.js`**
+
 ```js
+// pages/index.js
 import React from "react";
 import Layout from "@theme/Layout";
+import "./index.css";
 
 function Home() {
   return (
-    <Layout title="Page Not Found">
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '50vh',
-          fontSize: '20px',
-        }}>
-        <h1>Hello World </h1>
+    <Layout title="Hello">
+      <div className="App">
+        <header className="App-header">
+          <img
+            src={"https://forum.endiliey.com/static/media/logo.5d5d9eef.svg"}
+            className="App-logo"
+            alt="logo"
+          />
+          <p>
+            Edit <code>pages/index.js</code> and save to reload.
+          </p>
+        </header>
       </div>
     </Layout>
   );
@@ -134,19 +209,23 @@ export default Home;
 
 Then, let's run the development server
 ```bash
-yarn start
+yarn start # open up http://localhost:3000
 ```
-
-You should see a page with `Hello World` content.
 
 ![Hello World](/img/hello-world.PNG)
 
-Basically just write `React` here. 
-If you create a new react javascript file in `pages/hello.js`, it will be available as a `/hello` route. This is file based routing.
+You should see a page like this. The key idea is to just write **`React`** component as pages. For example,if you create a new file **`pages/hello.js`**, it will be available as a on http://localhost:3000/hello. This is automated routing based on page files.
 
 ## Docs
 
-Next, let's create a docs file `docs/hello.md`
+Next, let's touch on the powerful documentation system in Docusaurus.
+Before that, kill your webserver (<kbd>Cmd</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd>) and let's install [react-trend](https://github.com/unsplash/react-trend)
+
+```bash
+yarn add react-trend
+```
+
+Create a a new file `docs/hello.md` with below content
 
 ```md
 ---
@@ -154,6 +233,21 @@ title: Hello
 ---
 
 I can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
+
+import Trend from 'react-trend';
+
+<Trend
+  smooth
+  autoDraw
+  autoDrawDuration={3000}
+  autoDrawEasing="ease-out"
+  data={[0,2,5,9,5,10,3,5,0,0,1,8,2,9,0]}
+  gradient={['#00c6ff', '#F0F', '#FF0']}
+  radius={10}
+  strokeWidth={2}
+  strokeLinecap={'butt'}
+/>
+
 
 ## Markdown Syntax
 
@@ -168,13 +262,13 @@ I can write content using [GitHub-flavored Markdown syntax](https://github.githu
 ```
 
 
-If you go to http://localhost:3000/docs/hello you can see a new page created from that markdown file.
+If you go to http://localhost:3000/docs/hello you can see a new page created from that markdown file. 
 
 ![Markdown](/img/markdown.PNG)
 
-You can always edit the markdown file and it will be hot reloaded. Note that it is powered by MDX, so you can always embed JSX and import React component in markdown :wink:
+You can always edit the markdown file, save it and it will be hot reloaded. Did you notice that we just **imported a React component and embed it inside our markdown** :wink: ?
 
-Let's add a sidebar to it
+Next, let's add a sidebar to it
 
 Create a `sidebars.json` file
 ```json
@@ -209,29 +303,28 @@ You can see that there is a sidebar now on http://localhost:3000/docs/hello
 
 ## Blog
 
-Let's do something cooler. Kill the webserver with CTRL+C and install a new react component
-
-```bash
-yarn add react-trend
-```
+Another feature is the blogging system. Once again, I remind you that this blog is created with Docusaurus 2.
 
 Now, let's create a new markdown file `blog/2018-05-16-hello.md`
 
 ```md
 ---
-title: My Blog
+title: Hello
+author: Endilie Y
+authorTitle: Maintainer of Docusaurus
+authorURL: https://github.com/endiliey
+authorImageURL: https://avatars1.githubusercontent.com/u/17883920?s=460&v=4
+authorTwitter: endiliey
 ---
 
-This is my blog, I can import React component here
+Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://docusaurus-2.netlify.com/) :wink:
 
-<!--truncate-->
+<!--truncate -->
 
-import Trend from 'react-trend';
-
-<Trend data={[0, 10, 5, 22, 3.6, 11]} />
+More content here ....
 ```
 
-If you navigate to http://localhost:3000/blog/2018/05/16/hello, you can see that we just created a new blog post and we can embed React component inside.
+If you navigate to http://localhost:3000/blog. You can see that we have a blog list page. You can also navigate to http://localhost:3000/blog/2019/05/16/hello
 
 ![blog](/img/blog.PNG)
 
@@ -239,14 +332,14 @@ If you navigate to http://localhost:3000/blog/2018/05/16/hello, you can see that
 
 You might notice that Docusaurus provide a default component such as the Navbar and Footer. Can we override it ? Yes, you can.
 
-Run this command to override the footer and customize it.
+First of all, make sure to ill your webserver (<kbd>Cmd</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd>) and run this command to swizzle (override) the component.
 
 ```bash
 yarn docusaurus swizzle @docusaurus/theme-classic Footer
 ```
 
 It will create a `themes/Footer` file in your project folder.
-If you run the development server again and edit that component, you can see that we're customizing the Footer.
+Try to edit that file, save it and you can see that we're customizing the Footer.
 
 For example, we can just return null for the Footer.:
 ```js
@@ -264,7 +357,10 @@ And you can see that the footer is no longer shown. It's not the default Faceboo
 
 ## To be continued ....
 
-Anyway, that's all for now. 
+There are lot of other undocumented features that I am not able to write in this super short post, like [theme, plugin and presets](https://github.com/facebook/Docusaurus/issues/1438). There are also some killer features that we haven't implemented in v2 (but already did in v1) like i18n, and versioning. 
+
+Anyway, that's all for now. I hope you enjoyed this super short guide.
+
 Chat with us on [**Discord**](https://discordapp.com/invite/docusaurus) :wink:.
 
 ## References
