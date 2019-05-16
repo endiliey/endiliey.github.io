@@ -52,7 +52,7 @@ yarn init
 
 Install dependencies
 ```bash
-yarn add react react-dom @docusaurus/core@next @docusaurus/preset-classic@next
+yarn add react react-dom @docusaurus/core@2.0.0-alpha.15 @docusaurus/preset-classic@2.0.0-alpha.15
 ```
 
 Then, add some scripts to `package.json`
