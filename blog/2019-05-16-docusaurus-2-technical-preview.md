@@ -214,7 +214,7 @@ yarn start # open up http://localhost:3000
 
 ![Hello World](/img/hello-world.PNG)
 
-You should see a page like this. The key idea is to just write **`React`** component as pages. For example,if you create a new file **`pages/hello.js`**, it will be available as a on http://localhost:3000/hello. This is automated routing based on page files.
+You should see a page like this. The key idea is to just write **`React`** component as pages. For example,if you create a new file **`pages/hello.js`**, it will be available at http://localhost:3000/hello. This is automated routing based on page files.
 
 ## Docs
 
@@ -354,6 +354,35 @@ export default Footer;
 
 And you can see that the footer is no longer shown. It's not the default Facebook footer anymore! :smile:
 
+## Search
+
+To add search bar with Algolia, just add algolia field in your themeConfig. Note that you will need algolia API key. You can use docusaurus 2's api key for testing purposes.
+
+```js
+// docusaurus.config.js
+themeConfig: {
+    // ....
+    algolia: {
+      apiKey: '47ecd3b21be71c5822571b9f59e52544',
+      indexName: 'docusaurus-2',
+      algoliaOptions: {},
+    },
+  },
+```
+
+Example:
+
+![search](/img/search.png)
+
+## Build
+
+To build the website, just run this command. After that, check your **build** folder.
+
+```bash
+yarn build
+```
+
+You can deploy it to GitHub pages, netlify, etc. It's completely up to you. The site is server rendered so it works without JavaScript too !
 
 ## To be continued ....
 
