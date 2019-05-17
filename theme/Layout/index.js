@@ -9,13 +9,12 @@ import './styles.css';
 function BlogLayout(props) {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
-  const {baseUrl, favicon, tagline, title: defaultTitle} = siteConfig;
+  const {baseUrl, favicon, tagline, themeConfig = {}, title: defaultTitle} = siteConfig;
   const {children, title, isBlogListPage, description} = props;
 
+  const { author, authorImageURL, authorURL} = themeConfig;
+
   const renderBio = () => {
-    const authorImageURL = `https://avatars1.githubusercontent.com/u/17883920?s=400&u=0c9bcb0ad70e3ceb7eb10a8116f0a976c46624fa&v=4`;
-    const author = 'Endi';
-    const authorURL = 'https://github.com/endiliey';
     return (
       <div className="avatar">
         {authorImageURL && (
@@ -45,11 +44,11 @@ function BlogLayout(props) {
 
   const renderHeader = () => {
     if (isBlogListPage) {
-      return <h1>{siteConfig.title}</h1>;
+      return <h1>{defaultTitle}</h1>;
     } else {
       return (
         <h3>
-          <Link to={baseUrl}>{siteConfig.title}</Link>
+          <Link to={baseUrl}>{defaultTitle}</Link>
         </h3>
       );
     }

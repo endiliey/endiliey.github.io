@@ -6,17 +6,9 @@ const siteConfig = {
   projectName: 'endiliey.github.io',
   organizationName: 'endiliey',
   themeConfig: {
-    headerLinks: [
-      {href: 'https://forum.endiliey.com', label: 'Forum'},
-      {href: 'https://github.com/endiliey', label: 'GitHub'},
-    ],
-    algolia: {
-      apiKey: '171b70d5e547d2101578da9a40c0d9f5',
-      indexName: 'endiliey',
-      algoliaOptions: {
-        facetFilters: ['language:en'], // LANGUAGE will be dynamically changed in lib/core/Site.js
-      },
-    },
+    authorImageURL: `https://avatars1.githubusercontent.com/u/17883920?s=400&u=0c9bcb0ad70e3ceb7eb10a8116f0a976c46624fa&v=4`,
+    author: 'Endi',
+    authorURL: 'https://github.com/endiliey',
   },
   headerIcon: 'img/endilie.gif',
   favicon: 'img/endilie.gif',
