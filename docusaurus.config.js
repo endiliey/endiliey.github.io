@@ -10,7 +10,6 @@ const siteConfig = {
     author: 'Endi',
     authorURL: 'https://github.com/endiliey',
   },
-  headerIcon: 'img/endilie.gif',
   favicon: 'img/endilie.gif',
   presets: [
     [
