@@ -30,203 +30,120 @@ This website for example, is build with Docusaurus 2 alpha.
 
 ## Features
 
-- ⚛️ **Built using React** Extend or customize with React.
-- ⚡️ **Blazing Fast** Link prefetching, instant navigation and page views
-- ✂️ **Easy** Hot Reloadable out-of-the-box, automatic code and data splitting!
-- 💥 **Single-page application** Add dynamic interactivity to your website
-- 🎯 **SEO Friendly** files are staticly generated (SSR)
-- 😌 **Painless** Painless project setup. First class support for documentation
-- 📝 **[MDX](https://github.com/mdx-js/mdx) Based.** Write markdown enhanced by the power of components.
-- 🚀 **many others** ....
+- ⚛️ **Built using React** - Extend or customize with React
+- 📦 **Uses webpack** - Build an optimized bundle and use any CSS-in-JS solution you like
+- ⚡️ **Lightning Fast** - Link prefetching, instant navigation and page views
+- ✂️ **Easy** - Hot reloading out-of-the-box, automatic route-based code and data splitting! Create new routes by creating new Markdown or JSX files
+- 💥 **Single-page Application** - Client-side navigations and easily add dynamic interactivity to your website (Client-side Rendering)
+- 🎯 **SEO Friendly** - `index.html` files are statically generated for every possible path (Static Rendering)
+- 😌 **Painless** - Painless project setup. First class support for documentation
+- 📝 **MDX Based** - Write interactive components via JSX and React embedded in markdown
+- ☁️ **GitHub pages friendly** - Publish to GitHub pages with one command!
+- 🔌 **Pluggable** - Plugin system to extend basic functionality and do almost anything youw ant
+- 🎨 **Themeable** - Theming system to customize how your website's appearance
+- 🔍 **Search** - Make it easy for people to search what they need in your website.
+- 🌎 **i18n** - Internationalize your website easily (_coming soon_)
+- 💾 **Versioning** - Versioning support (_coming soon_)
+- 🚀 **Many others** ....
 
 ## 💡 Getting Started
 
-Ok, you're ready for action. At this moment of writing, **`docusaurus init`** command hasn't been implemented for Docusaurus v2 yet, so we'll have to create files manually for now.
+The easiest way to install Docusaurus is to use the command line tool that helps you scaffold a Docusaurus site skeleton. You can run this command anywhere in a new empty repository or within an existing repository, it will create a new directory containing the scaffolded files.
 
 ```bash
-mkdir website
-cd website
-yarn init
+npx @docusaurus/core@next init
 ```
 
-Install dependencies
+It will then prompt you for the `name` and the `template` for your Docusaurus site. We recommend the `classic` template so that you can get started quickly. The `classic` template comes with standard documentation, blog and custom pages features.
+
+## Project Structure
+
+Assuming you chose the classic template and named your site `my-website`, you will see the following files generated under a new directory `my-website/`:
+
+```sh
+my-website
+├── docs
+│   ├── doc1.md
+│   ├── doc2.md
+│   ├── doc3.md
+│   ├── exampledoc4.md
+│   └── exampledoc5.md
+├── blog
+│   ├── 2019-05-29-hello-world.md
+│   └── 2020-05-30-welcome.md
+├── package.json
+├── pages
+│   └── index.js
+├── sidebars.json
+├── docusaurus.config.js
+├── static
+│   └── img
+└── yarn.lock
+```
+
+## Running the Development Server
+
 ```bash
-yarn add react react-dom @docusaurus/core@next @docusaurus/preset-classic@next
+cd my-website
+npm start
 ```
 
-Then, add some scripts to `package.json`
+A browser window will open at http://localhost:3000.
 
-```json
-"scripts": {
-  "start": "docusaurus start",
-  "build": "docusaurus build",
-  "swizzle": "docusaurus swizzle",
-  "deploy": "docusaurus deploy"
-},
-```
-
-Create `docusaurus.config.js` with the content below:
-
-```js
-const siteConfig = {
-  title: "Docusaurus",
-  tagline: "Super awesome site",
-  url: "https://docusaurus.io",
-  baseUrl: "/",
-  projectName: "docusaurus",
-  organizationName: "facebook",
-  themeConfig: {
-    headerLinks: [
-      { url: "docs/hello", label: "Docs" },
-      { url: "blog", label: "Blog" }
-    ],
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Hello',
-              to: 'docs/hello',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            }
-          ],
-        },
-      ],
-      logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'https://docusaurus.io/img/oss_logo.png',
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-    },
-  },
-  headerIcon: "",
-  favicon: "",
-  presets: [
-    [
-      "@docusaurus/preset-classic"
-    ]
-  ]
-};
-
-module.exports = siteConfig;
-```
-
-Let's create three directories. `pages`, `docs` and `blog`.
-
-```md
-├─ docs
-├─ blog
-├─ pages
-└─ package.json
-└─ docusaurus.config.js
-```
+Congratulations! You have just created your first Docusaurus site! Browse around the site to see what's available.
 
 ## Pages
 
-Let's begin by creating our homepage. 
+In this section, we will learn about creating ad-hoc pages in Docusaurus using React. This is most useful for creating one-off standalone pages.
 
-We'll create **`pages/index.css`**
-
-```css
-/* pages/index.css */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-```
-
-And the javascript file itself **`pages/index.js`**
+In the `pages` directory, create a file called `hello.js` with the following contents:
 
 ```js
-// pages/index.js
-import React from "react";
-import Layout from "@theme/Layout";
-import "./index.css";
+import React from 'react';
+import Layout from '@theme/Layout';
 
-function Home() {
+function Hello() {
   return (
     <Layout title="Hello">
-      <div className="App">
-        <header className="App-header">
-          <img
-            src={"https://forum.endiliey.com/static/media/logo.5d5d9eef.svg"}
-            className="App-logo"
-            alt="logo"
-          />
-          <p>
-            Edit <code>pages/index.js</code> and save to reload.
-          </p>
-        </header>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '50vh',
+          fontSize: '20px',
+        }}>
+        <p>
+          Edit <code>pages/hello.js</code> and save to reload.
+        </p>
       </div>
     </Layout>
   );
 }
 
-export default Home;
+export default Hello;
 ```
 
-Then, let's run the development server
-```bash
-yarn start # open up http://localhost:3000
-```
+Once you save the file, the development server will automatically reload the changes. Now open http://localhost:3000/hello, you will see the new page you just created.
 
-![Hello World](/img/hello-world.PNG)
+Any file you create under `pages` directory will be automatically converted to a page, converting the directory hierarchy into paths. For example:
 
-You should see a page like this. The key idea is to just write **`React`** component as pages. For example,if you create a new file **`pages/hello.js`**, it will be available at http://localhost:3000/hello. This is automated routing based on page files.
+- `pages/index.js` → `<baseUrl>/`
+- `pages/test.js` → `<baseUrl>/test`
+- `pages/foo/test.js` → `<baseUrl>/foo/test`
+- `pages/foo/index.js` → `<baseUrl>/foo`
+
+### Using React
+
+React is used as the UI library to create pages. You can leverage on the expressibility of React to build rich web content.
 
 ## Docs
 
-Next, let's touch on the powerful documentation system in Docusaurus.
-Before that, kill your webserver (<kbd>Cmd</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd>) and let's install [react-trend](https://github.com/unsplash/react-trend)
+### Using Markdown
 
-```bash
-yarn add react-trend
-```
+Next, let's touch on the powerful feature in Docusaurus - documentation.
 
-Create a a new file `docs/hello.md` with below content
+Create a new file within the `docs` directory called `hello.md` with the following contents:
 
 ```md
 ---
@@ -235,72 +152,76 @@ title: Hello
 
 I can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
 
+### Markdown Syntax
+
+**Bold** _italic_ `code` [Links](#url)
+
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
+
+- Hey
+- Ho
+- Let's Go
+```
+
+Docusaurus supports Markdown syntax using [Remark](https://github.com/remarkjs/remark) for Markdown parser and is extensible via plugins.
+
+### Embedding React Components
+
+Did you know that you can now write React components within your Markdown files? This is possible because of [MDX](https://mdxjs.com), which allows you to write JSX within your Markdown documents.
+
+Now we'll add a third-party chart component into the Markdown file created above. Before that, kill your web server (<kbd>Cmd</kbd> + <kbd>C</kbd> or <kbd>Ctrl</kbd> + <kbd>C</kbd>) if it's running and install `react-trend` in your website directory.
+
+```bash
+npm install react-trend
+```
+
+Start the development server again and go to http://localhost:3000/docs/hello, you will see a new page created from the Markdown file.
+
+Edit `docs/hello.md` and append the following:
+
+```mdx
 import Trend from 'react-trend';
+
+_Here's a bar chart!_
 
 <Trend
   smooth
   autoDraw
   autoDrawDuration={3000}
   autoDrawEasing="ease-out"
-  data={[0,2,5,9,5,10,3,5,0,0,1,8,2,9,0]}
+  data={[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]}
   gradient={['#00c6ff', '#F0F', '#FF0']}
   radius={10}
   strokeWidth={2}
   strokeLinecap={'butt'}
 />
-
-
-## Markdown Syntax
-
-**Bold** _italic_ `code` [Links](#url)
-
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
-
-* Hey
-* Ho
-* Let's Go
 ```
 
+Save the file and notice that the site is hot-reloaded with the edited content.
 
-If you go to http://localhost:3000/docs/hello you can see a new page created from that markdown file. 
+We just imported a React component and embedded it within our markdown 😉!
 
-![Markdown](/img/markdown.PNG)
+### Sidebar
 
-You can always edit the markdown file, save it and it will be hot reloaded. Did you notice that we just **imported a React component and embed it inside our markdown** :wink: ?
+Next, let's add this page to the sidebar.
 
-Next, let's add a sidebar to it
+Edit the `sidebars.json` file and add the `hello` document.
 
-Create a `sidebars.json` file
-```json
+```diff
 {
   "docs": {
-    "Getting Started": [
-      "hello"
-    ]
++   "Getting started": ["hello"],
+    "Docusaurus": ["doc1"],
+    "First Category": ["doc2"],
+    "Second Category": ["doc3"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
   }
 }
 ```
 
-And edit your `docusaurus.config.js` presets to this
-
-```js
-// .... other code
-  presets: [
-    [
-      "@docusaurus/preset-classic",
-      {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.json")
-        }
-      }
-    ]
-  ]
-```
-
-You can see that there is a sidebar now on http://localhost:3000/docs/hello
-
-![docs](/img/docs.PNG)
+You can see that there is a sidebar now on http://localhost:3000/docs/hello.
 
 ## Blog
 
@@ -318,7 +239,7 @@ authorImageURL: https://avatars1.githubusercontent.com/u/17883920?s=460&v=4
 authorTwitter: endiliey
 ---
 
-Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://docusaurus-2.netlify.com/) :wink:
+Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://v2.docusaurus.io/) :wink:
 
 <!--truncate -->
 
@@ -326,8 +247,6 @@ More content here ....
 ```
 
 If you navigate to http://localhost:3000/blog. You can see that we have a blog list page. You can also navigate to http://localhost:3000/blog/2019/05/16/hello
-
-![blog](/img/blog.PNG)
 
 ## Theme
 
@@ -420,10 +339,6 @@ themeConfig: {
     },
   },
 ```
-
-Example:
-
-![search](/img/search.png)
 
 ## Build
 
