@@ -2,7 +2,7 @@
 title: Hello world
 ---
 
-Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://docusaurus-2.netlify.com/).
+Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://v2.docusaurus.io/).
 
 <!--truncate-->
 

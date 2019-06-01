@@ -406,5 +406,5 @@ Anyway, that's all for now. I hope you enjoyed this super short guide.
 Chat with us on [**Discord**](https://discordapp.com/invite/docusaurus) :wink:.
 
 ## References
-- Docusaurus 2 WIP site https://docusaurus-2.netlify.com/
+- Docusaurus 2 WIP site https://v2.docusaurus.io/
 - Docusaurus 1 site https://docusaurus.io/
