@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{44:function(e){e.exports={permalink:"/2019/04/30/rengorum",source:"/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-30-rengorum.md",description:"Single-page forum application built in ReactJS and Django Rest Framework.",date:"2019-04-30T06:00:00.000Z",tags:[],title:"Rengorum"}}}]);
