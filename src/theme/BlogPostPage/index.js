@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '@theme/Layout'; // eslint-disable-line
+import Layout from '@theme/Layout';
 import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPaginator from '@theme/BlogPostPaginator';
 

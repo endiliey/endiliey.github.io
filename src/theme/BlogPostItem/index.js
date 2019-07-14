@@ -1,5 +1,8 @@
 import React from 'react';
+import {MDXProvider} from '@mdx-js/react';
+
 import Link from '@docusaurus/Link';
+import MDXComponents from '@theme/MDXComponents';
 
 function BlogPostItem(props) {
   const {children, frontMatter, metadata, truncated} = props;
@@ -40,36 +43,36 @@ function BlogPostItem(props) {
           </small>
         </div>
         {!truncated && (
-          <div className="avatar margin-bottom--md">
-            {authorImageURL && (
-              <a
-                className="avatar__photo-link"
-                href={authorURL}
-                target="_blank"
-                rel="noreferrer noopener">
-                <img
-                  className="avatar__photo"
-                  src={authorImageURL}
-                  alt={author}
-                />
-              </a>
-            )}
-            <div className="avatar__intro">
-              {author && (
-                <>
-                  <h4 className="avatar__name">
-                    <a
+        <div className="avatar margin-bottom--md">
+          {authorImageURL && (
+            <a
+              className="avatar__photo-link"
+              href={authorURL}
+              target="_blank"
+              rel="noreferrer noopener">
+              <img
+                className="avatar__photo"
+                src={authorImageURL}
+                alt={author}
+              />
+            </a>
+          )}
+          <div className="avatar__intro">
+            {author && (
+              <>
+                <h4 className="avatar__name">
+                   <a
                       href={authorURL}
                       target="_blank"
                       rel="noreferrer noopener">
-                      {author}
-                    </a>
-                  </h4>
-                  <small className="avatar__subtitle">{authorTitle}</small>
-                </>
-              )}
-            </div>
+                    {author}
+                  </a>
+                </h4>
+                <small className="avatar__subtitle">{authorTitle}</small>
+              </>
+            )}
           </div>
+        </div>
         )}
       </header>
     );
@@ -78,7 +81,9 @@ function BlogPostItem(props) {
   return (
     <div>
       {renderPostHeader()}
-      <article className="markdown">{children}</article>
+      <article className="markdown">
+        <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+      </article>
       <div className="row margin-vert--sm">
         <div className="col col-6">
           {tags.length > 0 && (

@@ -51,7 +51,7 @@ This website for example, is build with Docusaurus 2 alpha.
 The easiest way to install Docusaurus is to use the command line tool that helps you scaffold a Docusaurus site skeleton. You can run this command anywhere in a new empty repository or within an existing repository, it will create a new directory containing the scaffolded files.
 
 ```bash
-npx @docusaurus/core@next init
+npx @docusaurus/init@next init my-website classic
 ```
 
 It will then prompt you for the `name` and the `template` for your Docusaurus site. We recommend the `classic` template so that you can get started quickly. The `classic` template comes with standard documentation, blog and custom pages features.
@@ -62,22 +62,28 @@ Assuming you chose the classic template and named your site `my-website`, you wi
 
 ```sh
 my-website
+├── blog
+│   ├── 2019-05-28-hola.md
+│   ├── 2019-05-29-hello-world.md
+│   └── 2020-05-30-welcome.md
 ├── docs
 │   ├── doc1.md
 │   ├── doc2.md
 │   ├── doc3.md
-│   ├── exampledoc4.md
-│   └── exampledoc5.md
-├── blog
-│   ├── 2019-05-29-hello-world.md
-│   └── 2020-05-30-welcome.md
+│   └── mdx.md
 ├── package.json
-├── pages
-│   └── index.js
-├── sidebars.json
-├── docusaurus.config.js
+├── src
+│   ├── css
+│   │   └── custom.css
+│   └── pages
+│       ├── styles.module.css
+│       └── index.js
 ├── static
 │   └── img
+├── docusaurus.config.js
+├── package.json
+├── README.md
+├── sidebars.js
 └── yarn.lock
 ```
 
@@ -96,7 +102,7 @@ Congratulations! You have just created your first Docusaurus site! Browse around
 
 In this section, we will learn about creating ad-hoc pages in Docusaurus using React. This is most useful for creating one-off standalone pages.
 
-In the `pages` directory, create a file called `hello.js` with the following contents:
+In the `src/pages` directory, create a file called `hello.js` with the following contents:
 
 ```js
 import React from 'react';
@@ -126,12 +132,12 @@ export default Hello;
 
 Once you save the file, the development server will automatically reload the changes. Now open http://localhost:3000/hello, you will see the new page you just created.
 
-Any file you create under `pages` directory will be automatically converted to a page, converting the directory hierarchy into paths. For example:
+If you are familiar with other static site generators like Jekyll and Next, this routing approach will feel familiar to you. Any JavaScript file you create under `/src/pages/` directory will be automatically converted to a website page, following the `/src/pages/` directory hierarchy. For example:
 
-- `pages/index.js` → `<baseUrl>/`
-- `pages/test.js` → `<baseUrl>/test`
-- `pages/foo/test.js` → `<baseUrl>/foo/test`
-- `pages/foo/index.js` → `<baseUrl>/foo`
+- `/src/pages/index.js` → `<baseUrl>/`
+- `/src/pages/test.js` → `<baseUrl>/test`
+- `/src/pages/foo/test.js` → `<baseUrl>/foo/test`
+- `/src/pages/foo/index.js` → `<baseUrl>/foo`
 
 ### Using React
 
@@ -162,8 +168,6 @@ I can write content using [GitHub-flavored Markdown syntax](https://github.githu
 - Ho
 - Let's Go
 ```
-
-Docusaurus supports Markdown syntax using [Remark](https://github.com/remarkjs/remark) for Markdown parser and is extensible via plugins.
 
 ### Embedding React Components
 
@@ -199,29 +203,21 @@ _Here's a bar chart!_
 
 Save the file and notice that the site is hot-reloaded with the edited content.
 
-We just imported a React component and embedded it within our markdown 😉!
+import Trend from 'react-trend';
 
-### Sidebar
+_Here's a bar chart!_
 
-Next, let's add this page to the sidebar.
-
-Edit the `sidebars.json` file and add the `hello` document.
-
-```diff
-{
-  "docs": {
-+   "Getting started": ["hello"],
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
-  }
-}
-```
-
-You can see that there is a sidebar now on http://localhost:3000/docs/hello.
+<Trend
+  smooth
+  autoDraw
+  autoDrawDuration={3000}
+  autoDrawEasing="ease-out"
+  data={[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]}
+  gradient={['#00c6ff', '#F0F', '#FF0']}
+  radius={10}
+  strokeWidth={2}
+  strokeLinecap={'butt'}
+/>
 
 ## Blog
 
@@ -261,7 +257,7 @@ import Navbar from '@theme/Navbar';
 The alias `@theme` can refer to a few directories, in the following priority:
 
 1. A user's `website/theme` directory, which is a special directory that has the higher precedence.
-1. A Docusaurus theme packages's `theme` directory.
+1. A Docusaurus theme packages's `src/theme` directory.
 1. Fallback components provided by Docusaurus core (usually not needed).
 
 Given the following structure
@@ -271,11 +267,12 @@ Given the following structure
 │   └── docusaurus-theme
 │       └── theme
 │           └── Navbar.js
-└── theme
-    └── Navbar.js
+└── src
+    └── theme
+      └── Navbar.js
 ```
 
-`theme/Navbar.js` takes precedence whenever `@theme/Navbar` is imported. This behavior is called component swizzling. In iOS, method swizzling is the process of changing the implementation of an existing selector (method). In the context of a website, component swizzling will mean providing an alternative component that takes precedence over the theme-provided component.
+`src/theme/Navbar.js` takes precedence whenever `@theme/Navbar` is imported. This behavior is called component swizzling. In iOS, method swizzling is the process of changing the implementation of an existing selector (method). In the context of a website, component swizzling will mean providing an alternative component that takes precedence over the theme-provided component.
 
 The classic/default Docusaurus theme will provide most components out of the box, and users can swizzle the components by adding a component of the same name in the `themes` directory if they want to modify how it looks and behaves.
 
