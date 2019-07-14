@@ -8,12 +8,27 @@ import Footer from '@theme/Footer';
 import './styles.css';
 
 function BlogLayout(props) {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  const {baseUrl, ogImage, favicon, tagline, themeConfig = {}, title: defaultTitle} = siteConfig;
-  const {children, title, isBlogListPage, description} = props;
-
-  const { author, authorImageURL, authorURL} = themeConfig;
+  const {siteConfig = {}} = useDocusaurusContext();
+  const {
+    favicon,
+    baseUrl,
+    tagline,
+    title: defaultTitle,
+    url: siteUrl,
+    themeConfig,
+  } = siteConfig;
+  const {
+    children,
+    title,
+    description,
+    image,
+    isBlogListPage,
+    permalink,
+  } = props;
+  const {author, authorImageURL, authorURL, image: defaultImage} =
+    themeConfig || {};
+  const metaTitle = title || `${defaultTitle} · ${tagline}`;
+  const metaImage = image || defaultImage;
 
   const renderBio = () => {
     return (
@@ -57,16 +72,38 @@ function BlogLayout(props) {
 
   return (
     <React.Fragment>
-      <Head defaultTitle={`${defaultTitle} · ${tagline}`}>
+      <Head>
         <html lang="en" />
-        {title && <title>{`${title} · ${tagline}`}</title>}
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+        {metaTitle && <title>{metaTitle}</title>}
+        {metaTitle && <meta property="og:title" content={metaTitle} />}
         {favicon && <link rel="shortcut icon" href={withBaseUrl(favicon)} />}
         {description && <meta name="description" content={description} />}
         {description && (
           <meta property="og:description" content={description} />
         )}
-        {/* todo: use og image instead of favicon */}
-        {favicon && <meta property="og:image" content={withBaseUrl(favicon)} />}
+        {metaImage && (
+          <meta
+            property="og:image"
+            content={siteUrl + withBaseUrl(metaImage)}
+          />
+        )}
+        {metaImage && (
+          <meta
+            property="twitter:image"
+            content={siteUrl + withBaseUrl(metaImage)}
+          />
+        )}
+        {metaImage && (
+          <meta name="twitter:image:alt" content={`Image for ${metaTitle}`} />
+        )}
+        {permalink && <meta property="og:url" content={siteUrl + permalink} />}
+        <meta
+          name="twitter:card"
+          content={image || favicon ? 'summary_large_image' : 'summary'}
+        />
       </Head>
       <div className="container">
         <div className="row">

@@ -9,6 +9,10 @@ const siteConfig = {
     authorImageURL: `https://avatars1.githubusercontent.com/u/17883920?s=400&u=0c9bcb0ad70e3ceb7eb10a8116f0a976c46624fa&v=4`,
     author: 'Endi',
     authorURL: 'https://github.com/endiliey',
+    image: 'img/endilie.jpg',
+    googleAnalytics: {
+      trackingID: 'UA-93956387-1',
+    },
   },
   favicon: 'img/endilie.gif',
   presets: [
