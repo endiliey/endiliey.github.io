@@ -102,7 +102,7 @@ function BlogLayout(props) {
         {permalink && <meta property="og:url" content={siteUrl + permalink} />}
         <meta
           name="twitter:card"
-          content={image || favicon ? 'summary_large_image' : 'summary'}
+          content='summary'
         />
       </Head>
       <div className="container">
