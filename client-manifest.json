@@ -13,254 +13,227 @@
       7,
       8,
       9,
-      10,
       0
     ],
     "@theme/NotFound": [
       0,
       2,
       3,
-      4,
-      7,
+      6,
       1
-    ],
-    "prism-react-renderer": [
-      0,
-      1,
-      3,
-      4,
-      2
     ],
     "@theme/BlogListPage": [
       0,
       1,
-      2,
-      3
+      2
     ],
     "@theme/BlogPostPage": [
       0,
       1,
-      2,
-      4
+      3
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md": [
       0,
-      5
+      4
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-30-rengorum.md": [
       0,
-      6
+      5
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-05-16-docusaurus-2-technical-preview.md": [
       0,
       1,
-      7
+      6
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-29-hello-world.md?truncated=true": [
       0,
-      8
+      7
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-04-30-rengorum.md?truncated=true": [
       0,
-      9
+      8
     ],
     "/home/travis/build/endiliey/endiliey.github.io/blog/2019-05-16-docusaurus-2-technical-preview.md?truncated=true": [
       0,
-      10
+      9
     ],
     "main": [
-      16,
-      11
+      15,
+      10
     ],
     "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-05-16-docusaurus-2-technical-preview-e27.json": [
-      12
+      11
     ],
     "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/index.json": [
-      13
+      12
     ],
     "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-04-29-hello-world-1ab.json": [
-      14
+      13
     ],
     "/home/travis/build/endiliey/endiliey.github.io/.docusaurus/docusaurus-plugin-content-blog/2019-04-30-rengorum-f51.json": [
-      15
+      14
     ],
     "runtime~main": [
-      11,
-      16
+      10,
+      15
     ]
   },
   "assets": {
     "0": {
       "css": [
         {
-          "file": "common.a44a94497742a5666adf.css",
-          "hash": "a44a94497742a5666adf",
-          "publicPath": "/common.a44a94497742a5666adf.css"
+          "file": "common.53c22e915da31699d9de.css",
+          "hash": "53c22e915da31699d9de",
+          "publicPath": "/common.53c22e915da31699d9de.css"
         }
       ],
       "js": [
         {
-          "file": "common.a44a94497742a5666adf.js",
-          "hash": "a44a94497742a5666adf",
-          "publicPath": "/common.a44a94497742a5666adf.js"
+          "file": "common.53c22e915da31699d9de.js",
+          "hash": "53c22e915da31699d9de",
+          "publicPath": "/common.53c22e915da31699d9de.js"
         }
       ]
     },
     "1": {
-      "css": [
-        {
-          "file": "vendors.404ee130b81a4a22b1a6.css",
-          "hash": "404ee130b81a4a22b1a6",
-          "publicPath": "/vendors.404ee130b81a4a22b1a6.css"
-        }
-      ],
       "js": [
         {
-          "file": "vendors.404ee130b81a4a22b1a6.js",
-          "hash": "404ee130b81a4a22b1a6",
-          "publicPath": "/vendors.404ee130b81a4a22b1a6.js"
+          "file": "vendors.fdbb05d1d21a55cf524e.js",
+          "hash": "fdbb05d1d21a55cf524e",
+          "publicPath": "/vendors.fdbb05d1d21a55cf524e.js"
         }
       ]
     },
     "2": {
       "js": [
         {
-          "file": "prism-react-renderer.c7653fa6f4eb586fa45a.js",
-          "hash": "c7653fa6f4eb586fa45a",
-          "publicPath": "/prism-react-renderer.c7653fa6f4eb586fa45a.js"
+          "file": "component---theme-blog-list-pagea-6-a-7ba.1d1562758b66d2f6b3b3.js",
+          "hash": "1d1562758b66d2f6b3b3",
+          "publicPath": "/component---theme-blog-list-pagea-6-a-7ba.1d1562758b66d2f6b3b3.js"
         }
       ]
     },
     "3": {
       "js": [
         {
-          "file": "component---theme-blog-list-pagea-6-a-7ba.b6c6ec8c553fb180a550.js",
-          "hash": "b6c6ec8c553fb180a550",
-          "publicPath": "/component---theme-blog-list-pagea-6-a-7ba.b6c6ec8c553fb180a550.js"
+          "file": "component---theme-blog-post-pageccc-cab.ce7ba2de460bde07dc36.js",
+          "hash": "ce7ba2de460bde07dc36",
+          "publicPath": "/component---theme-blog-post-pageccc-cab.ce7ba2de460bde07dc36.js"
         }
       ]
     },
     "4": {
       "js": [
         {
-          "file": "component---theme-blog-post-pageccc-cab.e4282106fe918c6d90bb.js",
-          "hash": "e4282106fe918c6d90bb",
-          "publicPath": "/component---theme-blog-post-pageccc-cab.e4282106fe918c6d90bb.js"
+          "file": "content---2019-04-29-hello-worldf-35-eb1.c213a00a6473b6db0196.js",
+          "hash": "c213a00a6473b6db0196",
+          "publicPath": "/content---2019-04-29-hello-worldf-35-eb1.c213a00a6473b6db0196.js"
         }
       ]
     },
     "5": {
       "js": [
         {
-          "file": "content---2019-04-29-hello-worldf-35-eb1.2e7f1d5f818dd33a5249.js",
-          "hash": "2e7f1d5f818dd33a5249",
-          "publicPath": "/content---2019-04-29-hello-worldf-35-eb1.2e7f1d5f818dd33a5249.js"
+          "file": "content---2019-04-30-rengorumbf-0-a73.1c07141ce5f8070dadbf.js",
+          "hash": "1c07141ce5f8070dadbf",
+          "publicPath": "/content---2019-04-30-rengorumbf-0-a73.1c07141ce5f8070dadbf.js"
         }
       ]
     },
     "6": {
       "js": [
         {
-          "file": "content---2019-04-30-rengorumbf-0-a73.6cd8974bda5d0fa41688.js",
-          "hash": "6cd8974bda5d0fa41688",
-          "publicPath": "/content---2019-04-30-rengorumbf-0-a73.6cd8974bda5d0fa41688.js"
+          "file": "content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.a0c93e657bb58d878b7f.js",
+          "hash": "a0c93e657bb58d878b7f",
+          "publicPath": "/content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.a0c93e657bb58d878b7f.js"
         }
       ]
     },
     "7": {
       "js": [
         {
-          "file": "content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.99c880d06a448562fe4b.js",
-          "hash": "99c880d06a448562fe4b",
-          "publicPath": "/content---2019-05-16-docusaurus-2-technical-preview-2-ea-1c3.99c880d06a448562fe4b.js"
+          "file": "content---7-db-f87.92956d55b6bf951e13da.js",
+          "hash": "92956d55b6bf951e13da",
+          "publicPath": "/content---7-db-f87.92956d55b6bf951e13da.js"
         }
       ]
     },
     "8": {
       "js": [
         {
-          "file": "content---7-db-f87.0459df80f0bcdecef25c.js",
-          "hash": "0459df80f0bcdecef25c",
-          "publicPath": "/content---7-db-f87.0459df80f0bcdecef25c.js"
+          "file": "content---a-64-e52.b520cf3e67564a3f5ecf.js",
+          "hash": "b520cf3e67564a3f5ecf",
+          "publicPath": "/content---a-64-e52.b520cf3e67564a3f5ecf.js"
         }
       ]
     },
     "9": {
       "js": [
         {
-          "file": "content---a-64-e52.2adcc69d09eefcf38644.js",
-          "hash": "2adcc69d09eefcf38644",
-          "publicPath": "/content---a-64-e52.2adcc69d09eefcf38644.js"
+          "file": "content---f-2-e-9d2.7e5553ada150a435c144.js",
+          "hash": "7e5553ada150a435c144",
+          "publicPath": "/content---f-2-e-9d2.7e5553ada150a435c144.js"
         }
       ]
     },
     "10": {
-      "js": [
-        {
-          "file": "content---f-2-e-9d2.946179c193d318085992.js",
-          "hash": "946179c193d318085992",
-          "publicPath": "/content---f-2-e-9d2.946179c193d318085992.js"
-        }
-      ]
-    },
-    "11": {
       "css": [
         {
-          "file": "main.73dd6fe23fc593f9e212.css",
-          "hash": "73dd6fe23fc593f9e212",
-          "publicPath": "/main.73dd6fe23fc593f9e212.css"
+          "file": "main.e38d714d18a65f5d90a9.css",
+          "hash": "e38d714d18a65f5d90a9",
+          "publicPath": "/main.e38d714d18a65f5d90a9.css"
         }
       ],
       "js": [
         {
-          "file": "main.73dd6fe23fc593f9e212.js",
-          "hash": "73dd6fe23fc593f9e212",
-          "publicPath": "/main.73dd6fe23fc593f9e212.js"
+          "file": "main.e38d714d18a65f5d90a9.js",
+          "hash": "e38d714d18a65f5d90a9",
+          "publicPath": "/main.e38d714d18a65f5d90a9.js"
+        }
+      ]
+    },
+    "11": {
+      "js": [
+        {
+          "file": "metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.c235b33c1d0c68d4f18a.js",
+          "hash": "c235b33c1d0c68d4f18a",
+          "publicPath": "/metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.c235b33c1d0c68d4f18a.js"
         }
       ]
     },
     "12": {
       "js": [
         {
-          "file": "metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.bb1a90c568cba7aee595.js",
-          "hash": "bb1a90c568cba7aee595",
-          "publicPath": "/metadata---2019-05-16-docusaurus-2-technical-previewa-68-09d.bb1a90c568cba7aee595.js"
+          "file": "metadata---dc-4-c53.6ded90fbd71b14c358cd.js",
+          "hash": "6ded90fbd71b14c358cd",
+          "publicPath": "/metadata---dc-4-c53.6ded90fbd71b14c358cd.js"
         }
       ]
     },
     "13": {
       "js": [
         {
-          "file": "metadata---dc-4-c53.85387730e52c3702b2fd.js",
-          "hash": "85387730e52c3702b2fd",
-          "publicPath": "/metadata---dc-4-c53.85387730e52c3702b2fd.js"
+          "file": "nextItem---2019-04-30-rengorumc-49-d50.b9743e534e620df17ba9.js",
+          "hash": "b9743e534e620df17ba9",
+          "publicPath": "/nextItem---2019-04-30-rengorumc-49-d50.b9743e534e620df17ba9.js"
         }
       ]
     },
     "14": {
       "js": [
         {
-          "file": "nextItem---2019-04-30-rengorumc-49-d50.9e70b6c2ee4a6dbb14f3.js",
-          "hash": "9e70b6c2ee4a6dbb14f3",
-          "publicPath": "/nextItem---2019-04-30-rengorumc-49-d50.9e70b6c2ee4a6dbb14f3.js"
+          "file": "nextItem---2019-05-16-docusaurus-2-technical-preview-615-649.ca5d7ac6adcd6f671740.js",
+          "hash": "ca5d7ac6adcd6f671740",
+          "publicPath": "/nextItem---2019-05-16-docusaurus-2-technical-preview-615-649.ca5d7ac6adcd6f671740.js"
         }
       ]
     },
     "15": {
       "js": [
         {
-          "file": "nextItem---2019-05-16-docusaurus-2-technical-preview-615-649.e6732117690552495b0c.js",
-          "hash": "e6732117690552495b0c",
-          "publicPath": "/nextItem---2019-05-16-docusaurus-2-technical-preview-615-649.e6732117690552495b0c.js"
-        }
-      ]
-    },
-    "16": {
-      "js": [
-        {
-          "file": "runtime~main.89d5b656ba4597522ff2.js",
-          "hash": "89d5b656ba4597522ff2",
-          "publicPath": "/runtime~main.89d5b656ba4597522ff2.js"
+          "file": "runtime~main.66bca502f9e684bd0607.js",
+          "hash": "66bca502f9e684bd0607",
+          "publicPath": "/runtime~main.66bca502f9e684bd0607.js"
         }
       ]
     }
