@@ -1,4 +1,7 @@
 import React from 'react';
+import {ThemeProvider, ColorMode} from 'theme-ui';
+import MDXComponents from '@theme/MDXComponents';
+import theme from './theme';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -100,22 +103,22 @@ function BlogLayout(props) {
           <meta name="twitter:image:alt" content={`Image for ${metaTitle}`} />
         )}
         {permalink && <meta property="og:url" content={siteUrl + permalink} />}
-        <meta
-          name="twitter:card"
-          content='summary'
-        />
+        <meta name="twitter:card" content="summary" />
       </Head>
-      <div className="container">
-        <div className="row">
-          <div className="blogHeader">
-            {renderHeader()}
-            <Toggle />
+      <ThemeProvider theme={theme} components={MDXComponents}>
+        <ColorMode />
+        <div className="container">
+          <div className="row">
+            <div className="blogHeader">
+              {renderHeader()}
+              <Toggle />
+            </div>
+            {isBlogListPage && <div className="blogHeader">{renderBio()}</div>}
           </div>
-          {isBlogListPage && <div className="blogHeader">{renderBio()}</div>}
         </div>
-      </div>
-      {children}
-      <Footer />
+        {children}
+        <Footer />
+      </ThemeProvider>
     </React.Fragment>
   );
 }

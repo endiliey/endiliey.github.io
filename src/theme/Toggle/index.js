@@ -1,63 +1,35 @@
-import React, {useState, useEffect} from 'react';
-import Toggle from 'react-toggle';
-import Head from '@docusaurus/Head';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
+import {useColorMode, jsx} from 'theme-ui';
 
-import './styles.css';
+const colors = ['light', 'dark', 'deep'];
 
 export default function(props) {
-  const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
-  const {baseUrl} = siteConfig;
-  const currentTheme =
-    typeof document !== 'undefined'
-      ? document.querySelector('html').getAttribute('data-theme')
-      : '';
-  const [theme, setTheme] = useState(currentTheme);
-
-  useEffect(() => {
-    try {
-      const localStorageTheme = localStorage.getItem('theme');
-      setTheme(localStorageTheme);
-    } catch (err) {}
-  }, []);
+  const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <React.Fragment>
-      <Head>
-        <html data-theme={theme} />
-      </Head>
-      <Toggle
-        aria-label={'theme toggle'}
-        icons={{
-          checked: (
-            <img
-              src={`${baseUrl}img/moon.png`}
-              width="16"
-              height="16"
-              role="presentation"
-              style={{pointerEvents: 'none'}}
-            />
-          ),
-          unchecked: (
-            <img
-              src={`${baseUrl}img/sun.png`}
-              width="16"
-              height="16"
-              role="presentation"
-              style={{pointerEvents: 'none'}}
-            />
-          ),
-        }}
-        checked={theme === 'dark'}
-        onChange={e => {
-          const nextTheme = e.target.checked ? 'dark' : '';
-          setTheme(nextTheme);
-          try {
-            localStorage.setItem('theme', nextTheme);
-          } catch (err) {}
-        }}
-      />
-    </React.Fragment>
+    <button
+      {...props}
+      className="button button--outline button--primary"
+      sx={{
+        appearance: 'none',
+        fontFamily: 'inherit',
+        fontSize: 1,
+        fontWeight: 'bold',
+        m: 0,
+        px: 2,
+        py: 2,
+        color: 'text',
+        bg: 'muted',
+        border: 0,
+        borderRadius: 2,
+        ':focus': {
+          outline: '2px solid',
+        },
+      }}
+      onClick={e => {
+        setColorMode(colors[(1 + colors.indexOf(colorMode)) % colors.length]);
+      }}>
+      {colorMode}
+    </button>
   );
 }
