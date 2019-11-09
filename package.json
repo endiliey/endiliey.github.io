@@ -21,6 +21,9 @@
     "react-trend": "^1.2.5",
     "react-youtube": "^7.9.0"
   },
+  "resolutions": {
+    "chokidar": "^3.3.0"
+  },
   "devDependencies": {
     "prettier": "^1.19.0"
   },
