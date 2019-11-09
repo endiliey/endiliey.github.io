@@ -16,13 +16,10 @@
     "@mdx-js/react": "^1.5.1",
     "classnames": "^2.2.6",
     "react": "^16.11.0",
-    "react-toggle": "^4.1.1",
     "react-dom": "^16.11.0",
+    "react-toggle": "^4.1.1",
     "react-trend": "^1.2.5",
     "react-youtube": "^7.9.0"
-  },
-  "resolutions": {
-    "chokidar": "^3.3.0"
   },
   "devDependencies": {
     "prettier": "^1.19.0"
