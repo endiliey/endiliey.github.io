@@ -1,11 +1,8 @@
 import React from 'react';
-import {ThemeProvider, ColorMode} from 'theme-ui';
-import MDXComponents from '@theme/MDXComponents';
-import theme from './theme';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import withBaseUrl from '@docusaurus/withBaseUrl';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Toggle from '@theme/Toggle';
 import Footer from '@theme/Footer';
 import './styles.css';
@@ -25,6 +22,7 @@ function BlogLayout(props) {
     title,
     description,
     image,
+    keywords,
     isBlogListPage,
     permalink,
   } = props;
@@ -32,6 +30,8 @@ function BlogLayout(props) {
     themeConfig || {};
   const metaTitle = title || `${defaultTitle} · ${tagline}`;
   const metaImage = image || defaultImage;
+  const metaImageUrl = siteUrl + useBaseUrl(metaImage);
+  const faviconUrl = useBaseUrl(favicon);
 
   const renderBio = () => {
     return (
@@ -82,43 +82,33 @@ function BlogLayout(props) {
         <meta name="viewport" content="width=device-width" />
         {metaTitle && <title>{metaTitle}</title>}
         {metaTitle && <meta property="og:title" content={metaTitle} />}
-        {favicon && <link rel="shortcut icon" href={withBaseUrl(favicon)} />}
+        {favicon && <link rel="shortcut icon" href={faviconUrl} />}
         {description && <meta name="description" content={description} />}
         {description && (
           <meta property="og:description" content={description} />
         )}
-        {metaImage && (
-          <meta
-            property="og:image"
-            content={siteUrl + withBaseUrl(metaImage)}
-          />
+        {keywords && keywords.length && (
+          <meta name="keywords" content={keywords.join(',')} />
         )}
-        {metaImage && (
-          <meta
-            property="twitter:image"
-            content={siteUrl + withBaseUrl(metaImage)}
-          />
-        )}
+        {metaImage && <meta property="og:image" content={metaImageUrl} />}
+        {metaImage && <meta property="twitter:image" content={metaImageUrl} />}
         {metaImage && (
           <meta name="twitter:image:alt" content={`Image for ${metaTitle}`} />
         )}
         {permalink && <meta property="og:url" content={siteUrl + permalink} />}
         <meta name="twitter:card" content="summary" />
       </Head>
-      <ThemeProvider theme={theme} components={MDXComponents}>
-        <ColorMode />
-        <div className="container">
-          <div className="row">
-            <div className="blogHeader">
-              {renderHeader()}
-              <Toggle />
-            </div>
-            {isBlogListPage && <div className="blogHeader">{renderBio()}</div>}
+      <div className="container">
+        <div className="row">
+          <div className="blogHeader">
+            {renderHeader()}
+            <Toggle />
           </div>
+          {isBlogListPage && <div className="blogHeader">{renderBio()}</div>}
         </div>
-        {children}
-        <Footer />
-      </ThemeProvider>
+      </div>
+      <main className="main">{children}</main>
+      <Footer />
     </React.Fragment>
   );
 }

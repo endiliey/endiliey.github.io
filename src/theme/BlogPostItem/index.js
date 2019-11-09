@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {MDXProvider} from '@mdx-js/react';
+import MDXComponents from '@theme/MDXComponents';
 import Link from '@docusaurus/Link';
 
 function BlogPostItem(props) {
@@ -79,7 +80,9 @@ function BlogPostItem(props) {
   return (
     <div>
       {renderPostHeader()}
-      <article className="markdown">{children}</article>
+      <article className="markdown">
+        <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+      </article>
       <div className="row margin-vert--sm">
         <div className="col col-6">
           {tags.length > 0 && (

@@ -1,35 +1,49 @@
-import React from 'react';
-import {useColorMode, jsx} from 'theme-ui';
+import React, {useCallback} from 'react';
+import Toggle from 'react-toggle';
+import Head from '@docusaurus/Head';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useTheme from '@theme/hooks/useTheme';
 
-const colors = ['light', 'dark', 'deep'];
+import './styles.css';
 
-export default function(props) {
-  const [colorMode, setColorMode] = useColorMode();
+export default function() {
+  const [theme, setTheme] = useTheme();
+
+  const onToggleChange = useCallback(
+    e => setTheme(e.target.checked ? 'dark' : ''),
+    [setTheme],
+  );
 
   return (
-    <button
-      {...props}
-      className="button button--outline button--primary"
-      sx={{
-        appearance: 'none',
-        fontFamily: 'inherit',
-        fontSize: 1,
-        fontWeight: 'bold',
-        m: 0,
-        px: 2,
-        py: 2,
-        color: 'text',
-        bg: 'muted',
-        border: 0,
-        borderRadius: 2,
-        ':focus': {
-          outline: '2px solid',
-        },
-      }}
-      onClick={e => {
-        setColorMode(colors[(1 + colors.indexOf(colorMode)) % colors.length]);
-      }}>
-      {colorMode}
-    </button>
+    <React.Fragment>
+      <Head>
+        <html lang="en" data-theme={theme} />
+      </Head>
+      <Toggle
+        aria-label={'theme toggle'}
+        icons={{
+          checked: (
+            <img
+              src={useBaseUrl(`img/moon.png`)}
+              width="16"
+              height="16"
+              role="presentation"
+              style={{pointerEvents: 'none'}}
+            />
+          ),
+          unchecked: (
+            <img
+              src={useBaseUrl(`img/sun.png`)}
+              width="16"
+              height="16"
+              role="presentation"
+              style={{pointerEvents: 'none'}}
+            />
+          ),
+        }}
+        checked={theme === 'dark'}
+        onChange={onToggleChange}
+      />
+    </React.Fragment>
   );
 }

@@ -11,21 +11,18 @@
     "prettier": "prettier --config .prettierrc --write \"**/*.js\""
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.21",
-    "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.21",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.21",
-    "@emotion/core": "^10.0.14",
-    "@mdx-js/react": "^1.0.27",
+    "@docusaurus/core": "^2.0.0-alpha.33",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.33",
+    "@mdx-js/react": "^1.5.1",
     "classnames": "^2.2.6",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-toggle": "^4.0.2",
-    "react-trend": "^1.2.4",
-    "react-youtube": "^7.9.0",
-    "theme-ui": "^0.2.14"
+    "react": "^16.11.0",
+    "react-toggle": "^4.1.1",
+    "react-dom": "^16.11.0",
+    "react-trend": "^1.2.5",
+    "react-youtube": "^7.9.0"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.19.0"
   },
   "browserslist": {
     "production": [
