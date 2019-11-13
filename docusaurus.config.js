@@ -22,6 +22,10 @@ const siteConfig = {
         blog: {
           path: './blog',
           routeBasePath: '/',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Endilie Y.`
+          },
         },
       },
     ],
