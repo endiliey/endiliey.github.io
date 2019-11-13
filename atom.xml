@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://endiliey.github.io/</id>
+    <title>Endilie Y Blog</title>
+    <updated>2019-05-16T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://endiliey.github.io/"/>
+    <subtitle>Endilie Y Blog</subtitle>
+    <icon>https://endiliey.github.io/img/endilie.gif</icon>
+    <rights>Copyright © 2019 Endilie Y.</rights>
+    <entry>
+        <title type="html"><![CDATA[Docusaurus 2 - Technical Preview]]></title>
+        <id>Docusaurus 2 - Technical Preview</id>
+        <link href="https://endiliey.github.io/2019/05/16/docusaurus-2-technical-preview"/>
+        <updated>2019-05-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Wanted to give a taste of the future Docusaurus ? Read this unofficial super short guide.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rengorum]]></title>
+        <id>Rengorum</id>
+        <link href="https://endiliey.github.io/2019/04/30/rengorum"/>
+        <updated>2019-04-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Single-page forum application built in ReactJS and Django Rest Framework.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello world]]></title>
+        <id>Hello world</id>
+        <link href="https://endiliey.github.io/2019/04/29/hello-world"/>
+        <updated>2019-04-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to my blog. This blog is created with [**Docusaurus 2 alpha**](https://v2.docusaurus.io/).]]></summary>
+    </entry>
+</feed>
