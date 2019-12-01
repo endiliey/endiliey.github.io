@@ -11,8 +11,8 @@
     "prettier": "prettier --config .prettierrc --write \"**/*.js\""
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.34",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.34",
+    "@docusaurus/core": "^2.0.0-alpha.37",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.37",
     "@mdx-js/react": "^1.5.1",
     "classnames": "^2.2.6",
     "react": "^16.11.0",

@@ -13,6 +13,9 @@ const siteConfig = {
     googleAnalytics: {
       trackingID: 'UA-93956387-1',
     },
+    prism: {
+      theme: require('prism-react-renderer/themes/nightOwl'),
+    },
   },
   favicon: 'img/endilie.gif',
   presets: [
