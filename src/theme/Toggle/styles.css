@@ -49,7 +49,7 @@
   transition: opacity 0.25s ease;
 }
 
-[data-theme="dark"] .react-toggle .react-toggle-track-check),
+[data-theme="dark"] .react-toggle .react-toggle-track-check,
 .react-toggle--checked .react-toggle-track-check {
   opacity: 1;
   transition: opacity 0.25s ease;
@@ -69,7 +69,7 @@
   transition: opacity 0.25s ease;
 }
 
-[data-theme="dark"] .react-toggle .react-toggle-track-x),
+[data-theme="dark"] .react-toggle .react-toggle-track-x,
 .react-toggle--checked .react-toggle-track-x {
   opacity: 0;
 }
@@ -87,7 +87,7 @@
   transform: translateX(0);
 }
 
-[data-theme="dark"] .react-toggle .react-toggle-thumb),
+[data-theme="dark"] .react-toggle .react-toggle-thumb,
 .react-toggle--checked .react-toggle-thumb {
   transform: translateX(26px);
   border-color: #19ab27;
