@@ -16,13 +16,13 @@ function BlogListPage(props) {
         <div className="row">
           <div className="col col--6 col--offset-3">
             {items.map(
-              ({content: BlogPostContent, metadata: blogPostMetadata}) => (
+              ({content: BlogPostContent}) => (
                 <div
                   className="margin-bottom--lg"
-                  key={blogPostMetadata.permalink}>
+                  key={BlogPostContent.metadata.permalink}>
                   <BlogPostItem
                     frontMatter={BlogPostContent.frontMatter}
-                    metadata={blogPostMetadata}
+                    metadata={BlogPostContent.metadata}
                     truncated>
                     <BlogPostContent />
                   </BlogPostItem>
