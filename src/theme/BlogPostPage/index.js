@@ -16,12 +16,14 @@ function BlogPostPage(props) {
               <BlogPostItem frontMatter={frontMatter} metadata={metadata}>
                 <BlogPostContent />
               </BlogPostItem>
-              <div className="margin-vert--xl">
-                <BlogPostPaginator
-                  nextItem={metadata.nextItem}
-                  prevItem={metadata.prevItem}
-                />
-              </div>
+              {(metadata.nextItem || metadata.prevItem) && (
+                <div className="margin-vert--xl">
+                  <BlogPostPaginator
+                    nextItem={metadata.nextItem}
+                    prevItem={metadata.prevItem}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
