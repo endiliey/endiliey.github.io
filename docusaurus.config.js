@@ -6,7 +6,7 @@ const siteConfig = {
   projectName: 'endiliey.github.io',
   organizationName: 'endiliey',
   themeConfig: {
-    authorImageURL: `https://avatars1.githubusercontent.com/u/17883920?s=400&u=0c9bcb0ad70e3ceb7eb10a8116f0a976c46624fa&v=4`,
+    authorImageURL: `/img/endi.jpg`,
     author: 'Endi',
     authorURL: 'https://github.com/endiliey',
     image: 'img/endilie.jpg',
