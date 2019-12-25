@@ -27,7 +27,7 @@ const siteConfig = {
           routeBasePath: '/',
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} Endilie Y.`
+            copyright: `Copyright © ${new Date().getFullYear()} Endilie Y.`,
           },
         },
       },

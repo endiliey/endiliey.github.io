@@ -15,20 +15,18 @@ function BlogListPage(props) {
       <div className="container margin-vert--xl">
         <div className="row">
           <div className="col col--6 col--offset-3">
-            {items.map(
-              ({content: BlogPostContent}) => (
-                <div
-                  className="margin-bottom--lg"
-                  key={BlogPostContent.metadata.permalink}>
-                  <BlogPostItem
-                    frontMatter={BlogPostContent.frontMatter}
-                    metadata={BlogPostContent.metadata}
-                    truncated>
-                    <BlogPostContent />
-                  </BlogPostItem>
-                </div>
-              ),
-            )}
+            {items.map(({content: BlogPostContent}) => (
+              <div
+                className="margin-bottom--lg"
+                key={BlogPostContent.metadata.permalink}>
+                <BlogPostItem
+                  frontMatter={BlogPostContent.frontMatter}
+                  metadata={BlogPostContent.metadata}
+                  truncated>
+                  <BlogPostContent />
+                </BlogPostItem>
+              </div>
+            ))}
             <BlogListPaginator metadata={metadata} />
           </div>
         </div>

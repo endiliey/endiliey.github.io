@@ -1,6 +1,5 @@
 import React, {useCallback} from 'react';
 import Toggle from 'react-toggle';
-import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useTheme from '@theme/hooks/useTheme';
@@ -17,36 +16,31 @@ export default function() {
   );
 
   return (
-    <React.Fragment>
-      <Head>
-        <html lang="en" />
-      </Head>
-      <Toggle
-        disabled={!isClient}
-        aria-label={'theme toggle'}
-        icons={{
-          checked: (
-            <img
-              src={useBaseUrl(`img/moon.png`)}
-              width="16"
-              height="16"
-              role="presentation"
-              style={{pointerEvents: 'none'}}
-            />
-          ),
-          unchecked: (
-            <img
-              src={useBaseUrl(`img/sun.png`)}
-              width="16"
-              height="16"
-              role="presentation"
-              style={{pointerEvents: 'none'}}
-            />
-          ),
-        }}
-        checked={theme === 'dark'}
-        onChange={onToggleChange}
-      />
-    </React.Fragment>
+    <Toggle
+      disabled={!isClient}
+      aria-label={'theme toggle'}
+      icons={{
+        checked: (
+          <img
+            src={useBaseUrl(`img/moon.png`)}
+            width="16"
+            height="16"
+            role="presentation"
+            style={{pointerEvents: 'none'}}
+          />
+        ),
+        unchecked: (
+          <img
+            src={useBaseUrl(`img/sun.png`)}
+            width="16"
+            height="16"
+            role="presentation"
+            style={{pointerEvents: 'none'}}
+          />
+        ),
+      }}
+      checked={theme === 'dark'}
+      onChange={onToggleChange}
+    />
   );
 }
