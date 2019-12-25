@@ -19,7 +19,7 @@ export default function() {
   return (
     <React.Fragment>
       <Head>
-        <html lang="en" data-theme={theme} />
+        <html lang="en" />
       </Head>
       <Toggle
         disabled={!isClient}
