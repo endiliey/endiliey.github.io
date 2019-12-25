@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -7,65 +7,41 @@
 <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Endilie Y Blog RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Endilie Y Blog Atom Feed">
 <link rel="preconnect" href="https://www.google-analytics.com">
-<script>
-              window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-              ga('create', 'UA-93956387-1', 'auto');
-              ga('send', 'pageview');
-            </script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93956387-1","auto"),ga("send","pageview")</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script type="text/javascript">/*<![CDATA[*/window.__chunkMapping={"main":["/main.7a16897b.js"],"305c3ad0":["/305c3ad0.5e98ce68.js"],"4fec924b":["/4fec924b.d4bd2d3d.js"],"5678bfa8":["/5678bfa8.f12f1e99.js"],"58597e27":["/58597e27.8ec63174.js"],"7684c280":["/7684c280.c2dfddaf.js"],"a6aa9e1f":["/a6aa9e1f.8bad4f74.js"],"a871ae56":["/a871ae56.fca7f79c.js"],"ccc49370":["/ccc49370.48ccb19f.js"],"ef0ffd3e":["/ef0ffd3e.10b723f1.js"]};/*]]>*/</script>
 
 <title data-react-helmet="true">Rengorum</title>
 
-<meta data-react-helmet="true" charset="utf-8"/><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" name="viewport" content="width=device-width"/><meta data-react-helmet="true" property="og:title" content="Rengorum"/><meta data-react-helmet="true" name="description" content="Single-page forum application built in ReactJS and Django Rest Framework."/><meta data-react-helmet="true" property="og:description" content="Single-page forum application built in ReactJS and Django Rest Framework."/><meta data-react-helmet="true" property="og:image" content="https://endiliey.github.io/img/endilie.jpg"/><meta data-react-helmet="true" property="twitter:image" content="https://endiliey.github.io/img/endilie.jpg"/><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Rengorum"/><meta data-react-helmet="true" name="twitter:card" content="summary"/>
+<meta data-react-helmet="true" charset="utf-8"><meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"><meta data-react-helmet="true" name="viewport" content="width=device-width"><meta data-react-helmet="true" property="og:title" content="Rengorum"><meta data-react-helmet="true" name="description" content="Single-page forum application built in ReactJS and Django Rest Framework."><meta data-react-helmet="true" property="og:description" content="Single-page forum application built in ReactJS and Django Rest Framework."><meta data-react-helmet="true" property="og:image" content="https://endiliey.github.io/img/endilie.jpg"><meta data-react-helmet="true" property="twitter:image" content="https://endiliey.github.io/img/endilie.jpg"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Rengorum"><meta data-react-helmet="true" name="twitter:card" content="summary">
 
-<link data-react-helmet="true" rel="shortcut icon" href="/img/endilie.gif"/>
+<link data-react-helmet="true" rel="shortcut icon" href="/img/endilie.gif">
 
 
-<link rel="stylesheet" type="text/css" href="/styles.7c5500d0.css" />
+<link rel="stylesheet" href="/styles.74295f5a.css">
 
 </head>
-<body >
-<script type="text/javascript">(function() {
-  function setDataThemeAttribute(theme) {
-    document.querySelector('html').setAttribute('data-theme', theme);
-  }
-  
-  var preferDarkQuery = '(prefers-color-scheme: dark)';
-  var mql = window.matchMedia(preferDarkQuery);
-  var supportsColorSchemeQuery = mql.media === preferDarkQuery;
-  var localStorageTheme = null;
-  try {
-    localStorageTheme = localStorage.getItem('theme');
-  } catch (err) {}
-  var localStorageExists = localStorageTheme !== null;
-
-  if (localStorageExists) {
-    setDataThemeAttribute(localStorageTheme);
-  } else if (supportsColorSchemeQuery && mql.matches) {
-    setDataThemeAttribute('dark');
-  }
-})();</script>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}function e(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}var n=window.matchMedia("(prefers-color-scheme: dark)");n.addListener((function(n){null===e()&&t(n.matches?"dark":"")}));var a=e();null!==a?t(a):n.matches&&t("dark")}()</script>
 <div id="__docusaurus">
-<div class="container"><div class="row"><div class="blogHeader"><h3><a aria-current="page" class="active" href="/">Endilie Y</a></h3><div class="react-toggle react-toggle--disabled"><div class="react-toggle-track"><div class="react-toggle-track-check"><img src="/img/moon.png" width="16" height="16" role="presentation" style="pointer-events:none"/></div><div class="react-toggle-track-x"><img src="/img/sun.png" width="16" height="16" role="presentation" style="pointer-events:none"/></div></div><div class="react-toggle-thumb"></div><input type="checkbox" disabled="" aria-label="theme toggle" class="react-toggle-screenreader-only"/></div></div></div></div><main class="main"><div class="container margin-vert--sm"><div class="row"><div class="col col--6 col--offset-3"><div><header><h1><a aria-current="page" class="active" href="/2019/04/30/rengorum">Rengorum</a></h1><div class="margin-bottom--sm"><small>April<!-- --> <!-- -->30<!-- -->, <!-- -->2019</small></div><div class="avatar margin-bottom--md"><div class="avatar__intro"></div></div></header><article class="markdown"><p>Single-page forum application built in ReactJS and Django Rest Framework.</p><p>This is a project that I build roughly a year ago just for fun. It is open source, you can check it on <a href="https://github.com/endiliey/rengorum">https://github.com/endiliey/rengorum</a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="live-demo-httpsforumendilieycom"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#live-demo-httpsforumendilieycom" title="Direct link to heading">#</a>Live Demo: <a href="https://forum.endiliey.com/">https://forum.endiliey.com/</a></h2><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="httpsyoutubet9vwwxydres"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#httpsyoutubet9vwwxydres" title="Direct link to heading">#</a><a href="https://youtu.be/t9vWwxydREs">https://youtu.be/t9vWwxydREs</a></h3><p><a href="http://www.youtube.com/watch?v=t9vWwxydREs" title="Forum app in ReactJS and Django"><img src="/img/rengorum/frontend_1.PNG" alt="Forum app in ReactJS and Django"/></a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="frontend"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#frontend" title="Direct link to heading">#</a>Frontend</h2><blockquote><p>The frontend is a fast, interactive and simple Single-Page-Application (SPA), written in ES6 Javascript and built with following technologies:</p><ul><li><a href="https://facebook.github.io/react/">React v16</a></li><li><a href="http://redux.js.org/">Redux v4</a></li><li><a href="https://github.com/ReactTraining/react-router">React Router v4</a></li><li><a href="https://github.com/gaearon/redux-thunk">Redux Thunk v2</a></li><li><a href="https://github.com/rt2zz/redux-persist">Redux Persist v5.9</a></li><li><a href="https://github.com/endiliey/rengorum/blob/master/frontend/package.json">etc</a></li></ul></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="demo-screenshots"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#demo-screenshots" title="Direct link to heading">#</a>Demo Screenshots:</h3><p><img src="/img/rengorum/frontend_2.PNG" alt="Screenshot 2"/>
-<img src="/img/rengorum/frontend_3.PNG" alt="Screenshot 3"/>
-<img src="/img/rengorum/frontend_4.PNG" alt="Screenshot 4"/>
-<img src="/img/rengorum/frontend_5.PNG" alt="Screenshot 5"/></p></article><div class="row margin-vert--sm"><div class="col col-6"></div></div></div><div class="margin-vert--xl"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/2019/05/16/docusaurus-2-technical-preview"><h5 class="pagination-nav__link--sublabel">Previous Post</h5><h4 class="pagination-nav__link--label">« <!-- -->Docusaurus 2 - Technical Preview</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/2019/04/29/hello-world"><h5 class="pagination-nav__link--sublabel">Next Post</h5><h4 class="pagination-nav__link--label">Hello world<!-- --> »</h4></a></div></nav></div></div></div></div></main><footer><div class="container"><div class="row"><div class="col col--6 col--offset-3"><div style="float:right"><a href="https://v2.docusaurus.io/" target="_blank" rel="noopener noreferrer">docusaurus 2</a></div><a href="https://www.twitter.com/endiliey" target="_blank" rel="noopener noreferrer">twitter</a> <!-- -->•<!-- --> <a href="https://github.com/endiliey" target="_blank" rel="noopener noreferrer">github</a></div></div></div><div class="margin-bottom--xl"></div></footer>
+<div class="container"><div class="row"><div class="blogHeader"><h3><a aria-current="page" class="active" href="/">Endilie Y</a></h3><div class="react-toggle react-toggle--disabled"><div class="react-toggle-track"><div class="react-toggle-track-check"><img src="/img/moon.png" width="16" height="16" role="presentation" style="pointer-events:none"></div><div class="react-toggle-track-x"><img src="/img/sun.png" width="16" height="16" role="presentation" style="pointer-events:none"></div></div><div class="react-toggle-thumb"></div><input type="checkbox" disabled="" aria-label="theme toggle" class="react-toggle-screenreader-only"></div></div></div></div><main class="main"><div class="container margin-vert--sm"><div class="row"><div class="col col--6 col--offset-3"><div><header><h1><a aria-current="page" class="active" href="/2019/04/30/rengorum">Rengorum</a></h1><div class="margin-bottom--sm"><small>April 30, 2019</small></div><div class="avatar margin-bottom--md"><div class="avatar__intro"></div></div></header><article class="markdown"><p>Single-page forum application built in ReactJS and Django Rest Framework.</p><p>This is a project that I build roughly a year ago just for fun. It is open source, you can check it on <a href="https://github.com/endiliey/rengorum">https://github.com/endiliey/rengorum</a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="live-demo-httpsforumendilieycom"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#live-demo-httpsforumendilieycom" title="Direct link to heading">#</a>Live Demo: <a href="https://forum.endiliey.com/">https://forum.endiliey.com/</a></h2><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="httpsyoutubet9vwwxydres"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#httpsyoutubet9vwwxydres" title="Direct link to heading">#</a><a href="https://youtu.be/t9vWwxydREs">https://youtu.be/t9vWwxydREs</a></h3><p><a href="http://www.youtube.com/watch?v=t9vWwxydREs" title="Forum app in ReactJS and Django"><img src="/img/rengorum/frontend_1.PNG" alt="Forum app in ReactJS and Django"></a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor" id="frontend"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#frontend" title="Direct link to heading">#</a>Frontend</h2><blockquote><p>The frontend is a fast, interactive and simple Single-Page-Application (SPA), written in ES6 Javascript and built with following technologies:</p><ul><li><a href="https://facebook.github.io/react/">React v16</a></li><li><a href="http://redux.js.org/">Redux v4</a></li><li><a href="https://github.com/ReactTraining/react-router">React Router v4</a></li><li><a href="https://github.com/gaearon/redux-thunk">Redux Thunk v2</a></li><li><a href="https://github.com/rt2zz/redux-persist">Redux Persist v5.9</a></li><li><a href="https://github.com/endiliey/rengorum/blob/master/frontend/package.json">etc</a></li></ul></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor" id="demo-screenshots"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#demo-screenshots" title="Direct link to heading">#</a>Demo Screenshots:</h3><p><img src="/img/rengorum/frontend_2.PNG" alt="Screenshot 2">
+<img src="/img/rengorum/frontend_3.PNG" alt="Screenshot 3">
+<img src="/img/rengorum/frontend_4.PNG" alt="Screenshot 4">
+<img src="/img/rengorum/frontend_5.PNG" alt="Screenshot 5"></p></article><div class="row margin-vert--sm"><div class="col col-6"></div></div></div><div class="margin-vert--xl"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/2019/05/16/docusaurus-2-technical-preview"><h5 class="pagination-nav__link--sublabel">Previous Post</h5><h4 class="pagination-nav__link--label">« Docusaurus 2 - Technical Preview</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/2019/04/29/hello-world"><h5 class="pagination-nav__link--sublabel">Next Post</h5><h4 class="pagination-nav__link--label">Hello world »</h4></a></div></nav></div></div></div></div></main><footer><div class="container"><div class="row"><div class="col col--6 col--offset-3"><div style="float:right"><a href="https://v2.docusaurus.io/" target="_blank" rel="noopener noreferrer">docusaurus 2</a></div><a href="https://www.twitter.com/endiliey" target="_blank" rel="noopener noreferrer">twitter</a> • <a href="https://github.com/endiliey" target="_blank" rel="noopener noreferrer">github</a></div></div></div><div class="margin-bottom--xl"></div></footer>
 </div>
 
-<script type="text/javascript" src="/styles.2bde4085.js"></script>
+<script src="/styles.b03f35ac.js"></script>
 
-<script type="text/javascript" src="/runtime~main.0dc43a45.js"></script>
+<script src="/runtime~main.23ac07e9.js"></script>
 
-<script type="text/javascript" src="/main.7a16897b.js"></script>
+<script src="/main.932d2111.js"></script>
 
-<script type="text/javascript" src="/common.1fd9addd.js"></script>
+<script src="/common.9bd0e459.js"></script>
 
-<script type="text/javascript" src="/2.6b66b0e4.js"></script>
+<script src="/2.b954e4fe.js"></script>
 
-<script type="text/javascript" src="/ccc49370.48ccb19f.js"></script>
+<script src="/ccc49370.335e2476.js"></script>
 
-<script type="text/javascript" src="/58597e27.8ec63174.js"></script>
+<script src="/58597e27.89fbc338.js"></script>
 
 
 </body>
